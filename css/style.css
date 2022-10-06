@@ -1,9 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 :root {
     /* --Sniglet-font: "Sniglet", cursive;
     --Rubik: "Rubik", cursive;
     --Patua: "Patua One", cursive;
     --Lobster: "lobster", cursive; */
+    --Poppins: 'Poppins', sans-serif;
+    --main-bg: #F1f1f1;
+    --hero-section-color-one: #17181D;
+    --hero-section-color-two: #373A41;
+    --text-color: #f0e950;
 }
 
 
@@ -15,7 +21,7 @@ html {
 }
 
 body {
-    background: #F1f1f1;
+    background: var(--main-bg);
     font-size: 1.6rem;
     line-height: 1.6;
     overflow-x: hidden;
