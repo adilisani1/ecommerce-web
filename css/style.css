@@ -154,7 +154,45 @@ body {
     -webkit-text-fill-color: transparent;
      filter: drop-shadow(3px 2px 4px #e8e9ec33);
 
-
-  
-
 } 
+.addcart-section{
+    /* position: relative; */
+    position: absolute;
+    right: 0;
+    bottom:0;
+}
+.addcart-items{
+   
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+   
+   
+    
+}
+.shopping-cart{
+    background-color:#c5c6c9;
+    padding: 2.5rem 2.5rem ;
+
+    
+}
+.cart-button{
+    background-color:#fff;
+    padding: 2.1rem 4rem ;
+    border: none;
+    /* font-family: 'Bahnschrift', sans-serif; */
+   
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 1.5rem;
+    color: #353536;
+    font-family: var(--Poppins);
+    /* border-top-right-radius:5px ;
+    border-bottom-right-radius:5px ; */
+}
+.cart-button:hover{
+background-color: #2a3e7b;
+color:var(--white);
+}
+
+
