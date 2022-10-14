@@ -29,7 +29,7 @@
     <!--NAV-BAR-SECTION-->
     <header class="header-wrap">
         <nav class="navbar navbar-expand-lg">
-            <div class="container">
+            <div class="container-fluid">
                 <a class="navbar-brand" href="#"><img class="logo-image" src="./images/logo/ecommerce-web-logo.png"
                         alt=""></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -51,6 +51,9 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Contact Us</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><span class="fas fa-shopping-bag"></span></a>
+                            </li>
 
                         </ul>
                     </div>
@@ -59,26 +62,103 @@
     </header>
 
 
-    <!--HERO SECTION -->
-    <div class="container hero-section-container"></div>
-    <div class="hero-section-bg">
-        <div class="hero-section-center">
-            <img class="" src="./images/hero-section/shoe-image.png" alt="" />
-            <div class="hero-section-heading">
-                <h1 class="hero-section-title">10</h1>
+
+
+    <!-- Swiper -->
+    <div class="swiper home-swiper">
+        <div class="swiper-wrapper ">
+            <div class="swiper-slide">
+                <div class="hero-section-bg-one">
+
+                    <div class="hero-section-center">
+                        <img class="shoe-img" src="./images/hero-section/shoe-image-two.png" alt="" />
+                        <h1 class="hero-section-title">10</h1>
+                    </div>
+
+                    <div class="side-search-area">
+                        <span class="fas fa-search"></span>
+                    </div>
+
+                    <div class="social">
+                        <span class="fab fa-facebook-f icon"></span>
+                        <span class="fab fa-twitter icon"></span>
+                        <span class="fab fa-instagram icon"></span>
+                    </div>
+
+                    <div class="addcart-section">
+                        <div class="addcart-items">
+                            <span class="fa fa-shopping-cart shopping-cart" aria-hidden="true"></span>
+                            <button class="cart-button">Add To Cart</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="swiper-slide active">
+                <div class="hero-section-bg-two">
+                    <div class="hero-section-center">
+                        <img class="imac-pro" src="./images/hero-section/imac-pro.png" alt="" />
+                        <!-- <img class="apple-logo-img" src="./images/hero-section/apple-logo.png" alt=""> -->
+                    </div>
+                    <div class="social">
+                        <span class="fab fa-facebook-f icon"></span>
+                        <span class="fab fa-twitter icon"></span>
+                        <span class="fab fa-instagram icon"></span>
+                    </div>
+                    <div class="addcart-section">
+                        <div class="addcart-items">
+                            <span class="fa fa-shopping-cart shopping-cart" aria-hidden="true"></span>
+                            <button class="cart-button">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="swiper-slide">
+                <div class="hero-section-bg-three">
+                    <div class="hero-section-center">
+                        <img class="apple-watch" src="./images/hero-section/clay-apple-watch.png" alt="" />
+                    </div>
+                    <div class="social">
+                        <span class="fab fa-facebook-f icon"></span>
+                        <span class="fab fa-twitter icon"></span>
+                        <span class="fab fa-instagram icon"></span>
+                    </div>
+                    <div class="addcart-section">
+                        <div class="addcart-items">
+                            <span class="fa fa-shopping-cart shopping-cart" aria-hidden="true"></span>
+                            <button class="cart-button">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="addcart-section">
-            <div class="addcart-items">
-                <span class="fa fa-shopping-cart shopping-cart" aria-hidden="true"></span>
-                <button class="cart-button">Add To Cart</button>
-            </div>
-        </div>
-    </div>
+        <div class="swiper-pagination"></div>
+        <!-- If we need navigation buttons -->
+
     </div>
 
 
     <!--MAIN SECTION-->
+
+    <div class="main-section-container">
+        <div class="container">
+            <div class="row mt-5 mb-2">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" src="./images/cards/laptop.jpg" alt="" />
+                        <div class="card-body">
+                            <h4>Card</h4>
+                            <img class="icon-class" src="./images/cards/cart.ico" alt="" />
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
 
 
