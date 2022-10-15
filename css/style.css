@@ -312,7 +312,8 @@ body {
     align-items: center;
     min-height: 100vh;
     /* background: #232323; */
-    background-color: #27282b;
+    /* background-color: #27282b; */
+    background: var(--main-bg);
     overflow: hidden;
     padding: 100px 20px;
     box-sizing: border-box;
