@@ -1,3 +1,17 @@
+//Navbar-Fixed
+$(function () {
+    $(window).on("scroll", function () {
+        if ($(window).scrollTop() > 50) {
+            $(".header-wrap").addClass("active");
+        } else {
+            $(".header-wrap").removeClass("active");
+        }
+    });
+});
+
+
+
+
 // Swiper
 var swiper = new Swiper(".home-swiper", {
     spaceBetween: 30,
