@@ -29,3 +29,12 @@ var swiper = new Swiper(".home-swiper", {
         prevEl: '.swiper-button-prev',
     },
 });
+$(function () {
+    $(window).on("scroll", function () {
+        if ($(window).scrollTop() > 50) {
+            $(".header-wrap").addClass("active");
+        } else {
+            $(".header-wrap").removeClass("active");
+        }
+    });
+});
