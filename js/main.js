@@ -18,10 +18,10 @@ var swiper = new Swiper(".home-swiper", {
         clickable: true,
         center: true
     },
-    // autoplay: {
-    //     delay: 5000,
+    autoplay: {
+        delay: 5000,
 
-    // },
+    },
     breakpoints: {
         0: {
             slidesPerView: 1,
@@ -50,3 +50,11 @@ $(function () {
         }
     });
 });
+
+
+$(function () {
+    $(document).on('click', '.card', function () {
+        $(this).addClass('active').siblings().removeClass('active');
+    })
+});
+
