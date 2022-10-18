@@ -10,8 +10,6 @@ $(function () {
 });
 
 
-
-
 // Swiper
 var swiper = new Swiper(".home-swiper", {
     spaceBetween: 30,
@@ -20,10 +18,10 @@ var swiper = new Swiper(".home-swiper", {
         clickable: true,
         center: true
     },
-    autoplay: {
-        delay: 5000,
+    // autoplay: {
+    //     delay: 5000,
 
-    },
+    // },
     breakpoints: {
         0: {
             slidesPerView: 1,
