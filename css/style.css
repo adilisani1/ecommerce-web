@@ -31,7 +31,7 @@ body {
     /* background: radial-gradient(#737575, #000000); */
     font-size: 1.6rem;
     line-height: 1.6;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 *,
@@ -464,6 +464,22 @@ margin-top: 5rem;
     box-shadow: 0 10px 32px 0 rgba(0, 0, 0, 0.4);
 }
 
+.big-card{
+    position: relative;
+   
+    height: 400px;
+    margin: 20px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1),rgba(255,255,255,0));
+    /* background-color: #27282b; */
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 2px solid rgba(255,255,255,0.01);
+    box-shadow: 0 10px 32px 0 rgba(0, 0, 0, 0.4);
+}
 
 .container1 .card .img8x{
     position: relative;
@@ -626,7 +642,7 @@ margin-top: 5rem;
 }
 
 .footer-container {
-  
+  margin-bottom: 3rem;
 
 }
 
@@ -643,4 +659,74 @@ margin-bottom: 1.2rem;
     color: var(--white);
     font-size: 1.3rem;
     font-family: var(--Poppins);
+}
+
+.footer-container .send-form {
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+}
+
+.footer-container .send-form .form-control {
+    padding: 1rem;
+    outline: none;
+    border-radius: 0;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+}
+.footer-container .send-form .fa-paper-plane {
+    background-color: var(--text-color);
+    padding-top: 1rem;
+    padding-bottom: 1.1rem;
+    padding-left: 1.2rem;
+      padding-right: 1.8rem;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.footer-container .send-form .fa-paper-plane:hover {
+    background-color:  orange;
+}
+
+.footer-container .footer-social-icons{
+    padding-top: 1rem;
+}
+
+.footer-container  .footer-social-icons .footer-icons{
+    margin: 0.1rem 0.8rem;
+}
+
+.footer-bottom{
+    position: absolute;
+    background:black ;
+    width: 100%;
+    padding: 2rem 5rem 1.5rem 5rem;
+    bottom: 0;
+    left: 0;
+    margin-top: 2rem;
+    
+}
+
+.footer-bottom .copyright-text {
+    font-size: 1.4rem;
+    color: var(--white)
+}
+
+.footer-bottom .payment-card-container {
+
+
+
+}
+
+.footer-bottom .payment-card-container .payment-card{
+    height: 2rem;
+    margin: 0rem 0.5rem;
+  
+}
+
+@media (max-width: 667px )  {
+    .footer-container{
+        margin-bottom: 6rem;
+    }
 }
