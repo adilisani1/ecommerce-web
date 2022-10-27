@@ -61,7 +61,7 @@ body {
     padding: 1rem 7rem;
     z-index: 999;
     background: transparent;
-    border-bottom: .1rem solid #c0c0c057;
+    border-bottom: .1rem solid #c0c0c02d;
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
     
 }
@@ -130,12 +130,11 @@ body {
 .swiper-pagination-bullet {
     /* width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 8px));
     height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 8px)); */
-  
     /* border-radius: 50%; */
     /* background: var(--swiper-pagination-bullet-inactive-color, #000); */
-    width:40px;
-    height: 3px;
-    border-radius: 20%;
+    /* width:40px;
+    height: 3px; */
+    /* border-radius: 20%; */
     background: var(--white);
     opacity: var(--swiper-pagination-bullet-inactive-opacity, 1);
 }
@@ -160,21 +159,28 @@ body {
 .hero-section-bg-one::before {
     content: "";
     position: absolute;
-    width: 700px;
-    height:700px;
+    width:600px;
+    height:600px;
     right: 9%;
     /* border-radius: 500px; */
     top: 11%;
     /* border: 25px solid var(--main-bg);  */
     background-color: var(--main-bg);
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;  */
     border-radius: 100%;
-    opacity: .2;
-        /* background-image: linear-gradient(to bottom, #3acfd5 0%, #3a4ed5 100%);
+    opacity: .7;
+    /* background-image: linear-gradient(to bottom, #3acfd5 0%, #3a4ed5 100%);
         top: 25px; */
-     
+     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    /* background-color: #27282b; */
+   /* backdrop-filter: blur(10px); */
+           z-index: -1;
+    border: 2px solid rgba(255, 255, 255, 0.01);
+    box-shadow: 0 10px 32px 0 rgb(0 0 0 / 40%);
     
 }
+
+
 
 
 
@@ -215,25 +221,27 @@ body {
     font-size: 8rem;
     font-family: var(--Raleway);
     font-weight: 800;
-    color: radial-gradient(#353840, #5f5faf);
+    /* color: radial-gradient(#353840, #5f5faf); */
+    color: var(--white);
     text-transform: uppercase;
     font-style: italic;
     /* background-image: linear-gradient(to left, #4B4C52, #5B5C62); */
-    background-image: linear-gradient(to bottom, #3acfd5 0%, #3a4ed5 100%);
+    /* background-image: linear-gradient(to bottom, #3acfd5 0%, #3a4ed5 100%); */
     background-size: 100%;
-    -webkit-background-clip: text;
+    /* -webkit-background-clip: text;
     -moz-background-clip: text;
      -webkit-text-fill-color: transparent;
-      -moz-text-fill-color: transparent;
+      -moz-text-fill-color: transparent; */
       
 }
 
 .hero-text{
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     color: var(--white);
-    font-family: var(--Poppins);
+    font-family: var(--Raleway);
     font-weight: 200;
     width: 85%;
+    margin-bottom: 2.1rem;
     
 }
 .cart-button-items{
@@ -342,6 +350,8 @@ text-transform: capitalize;
     
 }
 
+
+
 /* .hero-section-title {
     position: absolute;
     color: var(--white);
@@ -372,12 +382,21 @@ text-transform: capitalize;
     z-index: -2;
 }
 
+.hero-section-bg-two .hero-section-center {
+    margin-top: 18rem;
+}
+
 .hero-section-bg-two .hero-section-center .imac-pro {
-    width: 100%;
+    /* width: 100%;
     height: 45rem;
     max-width: 100%;
     object-fit: contain;
-    margin-top: 5rem;
+    margin-top: 5rem; */
+    height: 45rem;
+    max-width: 100%;
+    object-fit: contain;
+    width: 100%;
+     margin-top: 2rem;
    
 }
 
@@ -390,14 +409,26 @@ text-transform: capitalize;
     height: 100%;
     background-size: cover;
     z-index: -2;
+
 }
 
+.hero-section-bg-three .hero-section-center {
+    margin-top: 18rem;
+}
+
+
 .hero-section-center .apple-watch {
-    width: 100%;
+    /* width: 100%;
     height: 45rem;
     max-width: 100%;
     object-fit: contain;
-    margin-top: 5rem;
+    margin-top: 5rem; */
+        /* transform: rotate(-15deg); */
+        height: 45rem;
+        max-width: 100%;
+         object-fit: contain;
+        width: 100%;
+       margin-top: 5rem;
 }
 
 .side-search-area {
@@ -426,8 +457,8 @@ text-transform: capitalize;
     padding: 3.7rem;
     bottom:0;
     z-index: 2;
-    /* background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)); */
-    background: rgba(255, 255, 255, 0.08);
+    background: linear-gradient(2deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    /* background: rgba(255, 255, 255, 0.08); */
     backdrop-filter: blur(10px);
     box-shadow: 0 10px 32px 0 rgba(0, 0, 0, 0.4);
 }
