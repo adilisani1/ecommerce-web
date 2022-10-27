@@ -314,6 +314,11 @@ font-family: var(--Raleway);
 text-transform: capitalize;
 
 }
+.hero-button:hover {
+    background-image: linear-gradient(to bottom, #41f7fd, #334eff);
+  
+}
+
 
 /* .hero-section-center .hero-title-section {
             position: absolute;
