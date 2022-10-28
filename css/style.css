@@ -58,7 +58,7 @@ body {
     justify-content: space-between;
     align-items: center;
     transition: 0.6s;
-    padding: 1rem 7rem;
+    padding: 1rem 10rem;
     z-index: 999;
     background: transparent;
     border-bottom: .1rem solid #c0c0c02d;
@@ -159,10 +159,10 @@ body {
 .hero-section-bg-one::before {
     content: "";
     position: absolute;
-    width:500px;
-    height:500px;
-    right: 9%;
-    top: 14%;
+    width:400px;
+    height:400px;
+    right: 10%;
+    top: 20%;
     border-radius: 100%;
     opacity: 1;
     background-image: linear-gradient(to bottom, #41f7fd, #334eff);
@@ -179,7 +179,26 @@ body {
     
     
 }
-
+.hero-section-bg-one::after{
+    content: "";
+    position: absolute;
+    width:100px;
+    height:100px;
+    right:7%;
+    top: 15%;
+    border-radius: 100%;
+    opacity: 1;
+    /* background-image: linear-gradient(to bottom, #41f7fd, #334eff); */
+    border: 0.1rem solid #41f7fd; 
+    box-shadow: 0 10px 32px 0 rgb(0 0 0 / 40%);
+    z-index: -2;
+    /* background: linear-gradient(135deg, rgba(255,255,255,0.1),rgba(255,255,255,0)); */
+    /* background-color: #27282b; */
+    backdrop-filter: blur(10px);
+    border-radius: 100%;
+  
+    box-shadow: 0 10px 32px 0 rgba(0, 0, 0, 0.4);
+}
 
 
 
@@ -309,11 +328,11 @@ body {
     
 }
 .hero-button span{
-margin-left: 3rem;
-font-family: var(--Raleway);
-text-transform: capitalize;
-
+    margin-left: 3rem;
+    font-family: var(--Raleway);
+     text-transform: capitalize;
 }
+
 .hero-button:hover {
     background-image: linear-gradient(to bottom, #41f7fd, #334eff);
   
@@ -478,6 +497,10 @@ text-transform: capitalize;
 
 }
 
+.bottom-line-items div {
+    flex: 1;
+}
+
 .bottom-icons{
     display: inline-flex;
     align-items: center;
@@ -541,17 +564,36 @@ text-transform: capitalize;
      color:var(--white);
 }
 
+.social-bg{
+    height:100%;
+    padding: 0 4.2rem;
+    /* background-color: white; */
+    /* background: linear-gradient(to right, #343841, #404044); */
+    position: absolute;
+    background: linear-gradient(90deg, #353840, #131314);
+    top: 0;
+    right: 0;
 
+}
 .social{  
-    color: white;
+    color: var(--white);
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 65%;
+    top: 32rem;
+    /* margin-top: 50rem; */
+    /* top: 0;*/
+    margin-left: auto;
+    margin-right: auto;
     left: 0;
+    right: 0;
+    text-align: center;
+    
+    
 }
 .icon{
-    padding: 1.8rem 9.5rem;
+    padding: 2.5rem 0rem;
+
 }
 .fas fa-shopping-bag{
     color:white;
