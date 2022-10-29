@@ -36,11 +36,47 @@ var swiper = new Swiper(".home-swiper", {
     },
 
     // Navigation arrows
+    // navigation: {
+    //     nextEl: '.swiper-button-next',
+    //     prevEl: '.swiper-button-prev',
+    // },
+});
+
+
+// Swiper
+var swiper = new Swiper(".bottom-swiper", {
+    loop: true,
+    spaceBetween: 30,
+    pagination: {
+        el: ".swiper-pagination",
+
+    },
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: true
+    },
+
+    breakpoints: {
+        0: {
+            slidesPerView: 3,
+        },
+        768: {
+            slidesPerView: 3,
+        },
+        991: {
+            slidesPerView: 3,
+        },
+
+    },
+
+    // Navigation arrows
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
 });
+
+
 $(function () {
     $(window).on("scroll", function () {
         if ($(window).scrollTop() > 50) {

@@ -142,6 +142,8 @@ body {
     background: rgb(173, 173, 173);
 }
 
+
+
 .hero-section-bg-one{
     position: absolute;
     /* background: radial-gradient(#394774, #000000); */
@@ -156,7 +158,7 @@ body {
     z-index: -2;
 }
 
-.hero-section-bg-one::before {
+.circle-data::before {
     content: "";
     position: absolute;
     width:400px;
@@ -177,9 +179,8 @@ body {
     /* backdrop-filter: blur(10px); */
     /* border: 2px solid rgba(255, 255, 255, 0.01); */
     
-    
 }
-.hero-section-bg-one::after{
+.circle-data::after{
     content: "";
     position: absolute;
     width:100px;
@@ -196,15 +197,10 @@ body {
     /* background-color: #27282b; */
     backdrop-filter: blur(10px);
     border-radius: 100%;
-  
     box-shadow: 0 10px 32px 0 rgba(0, 0, 0, 0.4);
 }
 
-
-
-
-
-.hero-section-center {
+.hero-section-center-one {
    align-items: center;
    display:flex;
    flex-wrap: wrap;
@@ -300,7 +296,7 @@ body {
 
 .cart-bag{
     /* background-color: var(--white); */
-  margin-right: 1rem;
+    margin-right: 1rem;
     background-color: var(--cards);
     color:white;
     font-size: 1.5rem;
@@ -314,7 +310,6 @@ body {
 .hero-button {
     font-size: 1.5rem;
     /* padding: 1.2rem 3.6rem 1.2rem 3.6rem; */
-    
    /* border: 1px solid #525252; */
    border: none;
     /* margin-top: 0.2rem; */
@@ -351,7 +346,7 @@ body {
  
 } */
 
-.hero-section-center .hero-title-section .hero-title {
+.hero-section-center-one .hero-title-section .hero-title {
         color: var(--white);
         font-size: 40rem;
         /* font-family: var(--Poppins); */
@@ -364,37 +359,15 @@ body {
 
 }
 
-.hero-section-bg-one .hero-section-center .shoe-img {
+.hero-section-bg-one .hero-section-center-one .shoe-img {
     transform: rotate(-15deg);
     height: 50rem;
     max-width: 100%;
     object-fit: contain;
     width: 100%;
-     margin-top: 2rem;
-    /* height: 50rem;
-        object-fit: contain; */
+    margin-top: 2rem;
     
 }
-
-
-
-/* .hero-section-title {
-    position: absolute;
-    color: var(--white);
-    margin-left: auto !important;
-    margin-right: auto !important;
-    left: 50%;
-    font-size: 85rem;
-    transform: translate(-50%, -68%);
-    z-index: -1;
-    font-family: 'Bahnschrift', sans-serif;
-    font-weight: 600;
-    background: linear-gradient(#ffffff, #c5c6c9);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    filter: drop-shadow(3px 2px 4px #e8e9ec33);
-    opacity: .3;
-} */
 
 .hero-section-bg-two {
     position: absolute;
@@ -408,21 +381,27 @@ body {
     z-index: -2;
 }
 
+.hero-section-center-two{
+    align-items: center;
+    display:flex;
+    flex-wrap: wrap;
+    margin-top: 12rem;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
 /* .hero-section-bg-two .hero-section-center {
     margin-top: 18rem;
 } */
 
-.hero-section-bg-two .hero-section-center .imac-pro {
-    /* width: 100%;
-    height: 45rem;
-    max-width: 100%;
-    object-fit: contain;
-    margin-top: 5rem; */
-    height: 45rem;
-    max-width: 100%;
-    object-fit: contain;
-    width: 100%;
-     margin-top: 2rem;
+.hero-section-bg-two .hero-section-center-two .imac-pro {
+
+     height: 45rem;
+        max-width: 100%;
+        object-fit: contain;
+        width: 100%;
+        margin-top: 2rem;
    
 }
 
@@ -441,9 +420,19 @@ body {
 /* .hero-section-bg-three .hero-section-center {
     margin-top: 18rem;
 } */
+.hero-section-center-three{
+    align-items: center;
+    display:flex;
+    flex-wrap: wrap;
+    margin-top: 12rem;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
 
 
-.hero-section-center .apple-watch {
+
+.hero-section-center-three .apple-watch {
     /* width: 100%;
     height: 45rem;
     max-width: 100%;
@@ -451,10 +440,11 @@ body {
     margin-top: 5rem; */
         /* transform: rotate(-15deg); */
         height: 45rem;
-        max-width: 100%;
-         object-fit: contain;
-        width: 100%;
-       margin-top: 5rem;
+            max-width: 100%;
+            object-fit: contain;
+            width: 100%;
+            margin-top: 2rem;
+            
 }
 
 .side-search-area {
@@ -465,7 +455,6 @@ body {
     top: 0;
     z-index: -5;
 }
-
 
 
 .search-bar {
@@ -488,6 +477,13 @@ body {
     backdrop-filter: blur(10px);
     box-shadow: 0 10px 32px 0 rgba(0, 0, 0, 0.4);
 }
+
+.bottom-swiper {
+    height:6vh;
+    width: 100%;
+}
+
+
 .bottom-line-items{
     display: flex;
     align-items: center;
@@ -498,7 +494,7 @@ body {
 }
 
 .bottom-line-items div {
-    flex: 1;
+ 
 }
 
 .bottom-icons{
