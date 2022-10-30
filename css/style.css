@@ -469,7 +469,7 @@ body {
     right: 0;
     left: 0;
     width: 100%;
-    padding: 3.7rem;
+    padding: 1rem;
     bottom:0;
     z-index: 2;
     background: linear-gradient(2deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
@@ -479,7 +479,7 @@ body {
 }
 
 .bottom-swiper {
-    height:6vh;
+    height:16vh;
     width: 100%;
 }
 
@@ -492,6 +492,11 @@ body {
     padding: 1rem 3.5rem;
 
 }
+.bottom-line-products{
+    height: 10rem;
+    transform: rotate(-20deg);
+    
+}
 
 .bottom-line-items div {
  
@@ -501,7 +506,7 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    position: relative;
+    /* position: relative; */
 }
 
 .bottom-icons .bottom-heading-text {
