@@ -61,7 +61,7 @@ body {
     justify-content: space-between;
     align-items: center;
     transition: 0.6s;
-    padding: 1rem 7rem;
+    padding: 1rem 10rem;
     z-index: 999;
     background: transparent;
     border-bottom: .1rem solid #c0c0c02d;
@@ -117,7 +117,7 @@ body {
 /*------------------------------------*/
 .home-swiper{
  width: 100%;
- height: 95vh;
+ height: 100vh;
 }
 
 .swiper{
@@ -158,12 +158,12 @@ body {
     width: 100%;
     background-size: cover;
     position: relative;
-    height: 95vh;
+    height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     z-index: -2;
-    padding: 160px 95px 60px 95px;
+    padding: 120px 90px 60px 90px;
 }
 
 .circle-data::before {
@@ -358,6 +358,7 @@ body {
         color: var(--white);
         font-size: 40rem;
         /* font-family: var(--Poppins); */
+     
         margin-bottom: 0;
         font-weight: 700;
         opacity: .1;
@@ -368,11 +369,11 @@ body {
 
 .hero-section-bg-one .hero-section-center-one .shoe-img {
     transform: rotate(-15deg);
-    /* height: 50rem; */
+    height: 50rem;
     max-width: 100%;
     object-fit: contain;
     width: 100%;
-    /* margin-top: 2rem; */
+    margin-top: 2rem;
     
 }
 
@@ -386,7 +387,7 @@ body {
     height: 100%;
     background-size: cover;
     z-index: -2;
-padding: 120px 20px 60px 90px;
+    padding: 120px 0 60px 0;
 }
 
 .hero-section-center-two{
@@ -405,12 +406,11 @@ padding: 120px 20px 60px 90px;
 
 .hero-section-bg-two .hero-section-center-two .imac-pro {
 
-        /* height: 45rem; */
+        height: 45rem;
         max-width: 100%;
         object-fit: contain;
-        width: 75%;
-        height: auto;
-        /* margin-top: 2rem; */
+        width: 100%;
+        margin-top: 2rem;
    
 }
 
@@ -420,10 +420,9 @@ padding: 120px 20px 60px 90px;
     top: 0;
     left: 0;
     width: 100%;
-    height: 95vh;
+    height: 100%;
     background-size: cover;
     z-index: -2;
-    padding: 160px 20px 60px 90px;
 
 }
 
@@ -434,7 +433,7 @@ padding: 120px 20px 60px 90px;
     align-items: center;
     display:flex;
     flex-wrap: wrap;
-    /* margin-top: 12rem; */
+    margin-top: 12rem;
     justify-content: center;
     position: relative;
     width: 100%;
@@ -449,11 +448,11 @@ padding: 120px 20px 60px 90px;
     object-fit: contain;
     margin-top: 5rem; */
         /* transform: rotate(-15deg); */
+     height: 45rem;
      max-width: 100%;
      object-fit: contain;
-      width: 50%;
-      height: auto;
-     
+      width: 100%;
+      margin-top: 2rem;
             
 }
 
@@ -668,29 +667,28 @@ padding: 120px 20px 60px 90px;
 /* .social-bg{
     height:100%;
     padding: 0 4.2rem;
- position: absolute;
+    
+    position: absolute;
     background: linear-gradient(90deg, #353840, #131314);
     top: 0;
-    left: 0;
+    right: 0;
 
 } */
 .social{  
     color: var(--white);
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
     /* background: linear-gradient(90deg, #353840, #131314); */
     position: absolute;
     margin-left: auto;
     margin-right: auto;
-    left: 0;
+    right: 0;
     text-align: center;
-    padding: 1rem 7rem;
-    bottom: 2rem;
+    padding: 1rem 3rem;
+    bottom: 4rem;
 }
 .icon{
-    padding: 1.8rem 2.5rem;
-    
+    padding: 2.5rem 2.8rem;
 }
 
 .fas fa-shopping-bag{
@@ -993,11 +991,12 @@ text-align: center; */
   }
 
   .big-card-text .big-card-title {
-    font-size: 3rem;
+    font-size: 4rem;
     text-transform: uppercase;
-    font-family: "Helvetica Neue";
-    font-weight: 600;
+    font-family: var(--Poppins);
+    font-weight: 700;
     color: var(--text-color);
+    font-style: italic;
     
   }
 
@@ -1007,6 +1006,8 @@ text-align: center; */
        font-size: 2rem;
        font-weight: lighter;
        font-family: var(--Poppins);
+       font-weight: 100;
+       font-weight: 100;
    }
 
  .big-card-text .big-card-add-cart {
