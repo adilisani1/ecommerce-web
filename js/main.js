@@ -34,7 +34,6 @@ var swiper = new Swiper(".home-swiper", {
         },
 
     },
-
     // Navigation arrows
     // navigation: {
     //     nextEl: '.swiper-button-next',
@@ -45,23 +44,24 @@ var swiper = new Swiper(".home-swiper", {
 
 // Swiper
 var swiper = new Swiper(".bottom-swiper", {
+    slidesPerView: 3,
+    SlidesPerGroup: 3,
     loop: true,
-    spaceBetween: 30,
+    loopFillGroupWithBlank: true,
     pagination: {
         el: ".swiper-pagination",
-
+        clickable: true,
     },
     autoplay: {
-        delay: 2000,
-        disableOnInteraction: true
+        delay: 3000,
     },
 
     breakpoints: {
         0: {
-            slidesPerView: 3,
+            slidesPerView: 1,
         },
         768: {
-            slidesPerView: 3,
+            slidesPerView: 2,
         },
         991: {
             slidesPerView: 3,
