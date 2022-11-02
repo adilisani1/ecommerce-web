@@ -61,7 +61,7 @@ body {
     justify-content: space-between;
     align-items: center;
     transition: 0.6s;
-    padding: 1rem 7rem;
+    padding: 1rem 11rem;
     z-index: 999;
     background: transparent;
     border-bottom: .1rem solid #c0c0c02d;
@@ -74,7 +74,7 @@ body {
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
-    padding: 1rem 7rem;
+    padding: 1rem 11rem;
     transition-duration: 0.6s;
     z-index: 999;
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
@@ -163,7 +163,7 @@ body {
     background-repeat: no-repeat;
     background-position: center center;
     z-index: -2;
-    padding: 160px 95px 60px 95px;
+    padding: 160px 120px 60px 120px;
 }
 
 .circle-data::before {
@@ -468,7 +468,7 @@ padding: 120px 20px 60px 90px;
 
 
 .search-bar {
-    padding: 2rem 2.5rem;
+    padding: 2rem 6.5rem;
     font-size: 1.9rem;
     color: #ffffff;
 }
@@ -477,7 +477,8 @@ padding: 120px 20px 60px 90px;
      padding: 1rem;
      margin-top: -18rem;
      position: relative;
-     z-index: 222;width: 100%;
+     z-index: 222;
+     width: 100%;
      display: flex;
      justify-content: flex-end;
      /* background: linear-gradient(2deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
@@ -685,7 +686,7 @@ padding: 120px 20px 60px 90px;
     margin-right: auto;
     left: 0;
     text-align: center;
-    padding: 1rem 7rem;
+    padding: 1rem 10rem;
     bottom: 2rem;
 }
 .icon{
