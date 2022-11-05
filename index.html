@@ -23,10 +23,14 @@
 
 <body>
 
+
     <!--NAV-BAR-SECTION-->
-    <header class="header-wrap">
+    <!-- <header class="header-wrap">
+
         <nav class="navbar navbar-expand-lg">
+
             <div class="container-fluid">
+
                 <a class="navbar-brand" href="#"><img class="logo-image" src="./images/logo/ecommerce-web-logo.png"
                         alt=""></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -53,9 +57,8 @@
                                 <a class="nav-link" href="#">
                                     <ion-icon name="bag-outline"></ion-icon>
                                 </a>
-
                             </li>
-                            <!--Add Favourite Icon Here-->
+                           
                             <li class="nav-item">
                                 <a class="nav-link" href="#"><span class="far fa-heart"></span></a>
                             </li>
@@ -68,27 +71,80 @@
 
         <div class="side-search-area">
             <div class="search">
-                <!-- <span class="fas fa-search search-bar"></span> -->
+                <span class="fas fa-search search-bar"></span>
                 <ion-icon class="search-bar" name="search-outline"></ion-icon>
             </div>
         </div>
+    </header> -->
 
+
+
+
+    <!-- <aside>
+        <div class="side-menu-btn">
+            <i class="fa fa-bars text-white"></i>
+        </div>
+        <ul class="social">
+            <li class="fab fa-facebook-f icon text-white"></li>
+            <li class="fab fa-twitter icon text-white"></li>
+            <li class="fab fa-instagram icon text-white"></li>
+        </ul>
+    </aside> -->
+
+
+    <header class="header-wrap">
+
+        <aside>
+            <div class="">
+                <a class="navbar-brand" href="#"><img class="logo-image" src="./images/logo/ecommerce-web-logo.png"
+                        alt=""></a>
+            </div>
+
+        </aside>
+
+        <nav class="navigation-container">
+            <ul class="nav-menu">
+                <li class="">
+                    <a class="" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="">
+                    <a class="" href="#">Shop</a>
+                </li>
+                <li class="">
+                    <a class="" href="#">Deals</a>
+                </li>
+                <li class="">
+                    <a class="" href="#">Contact Us</a>
+                </li>
+
+                <li class="">
+                    <a class="" href="#">
+                        <ion-icon name="bag-outline"></ion-icon>
+                    </a>
+                </li>
+
+                <li class="">
+                    <a class="" href="#"><span class="far fa-heart"></span></a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="mobile-nav-items">
+            <i class="fa fa-bars text-white menu-btn"></i>
+            <i class="fas fa-times text-white close-btn"></i>
+        </div>
 
     </header>
-
-
-
 
     <!-- Swiper -->
     <div class="swiper home-swiper">
         <div class="swiper-wrapper">
-
             <div class="swiper-slide">
 
                 <div class="hero-section-bg-one">
+
                     <div class="circle-data"></div>
                     <div class="container-fluid">
-
                         <div class="row">
                             <div class="hero-section-center-one">
                                 <div
@@ -125,19 +181,17 @@
                         </div>
                     </div>
 
-                    <!-- <div class="social-bg"> -->
+
+                </div>
+
+                <div class="social-bg">
                     <div class="social">
                         <span class="fab fa-facebook-f icon"></span>
                         <span class="fab fa-twitter icon"></span>
                         <span class="fab fa-instagram icon"></span>
                     </div>
-                    <!-- </div> -->
                 </div>
-
             </div>
-
-
-
 
             <!--Slide 2-->
             <div class="swiper-slide">
@@ -182,13 +236,7 @@
                         </div>
                     </div>
 
-                    <div class="social-bg">
-                        <div class="social">
-                            <span class="fab fa-facebook-f icon"></span>
-                            <span class="fab fa-twitter icon"></span>
-                            <span class="fab fa-instagram icon"></span>
-                        </div>
-                    </div>
+
                 </div>
 
             </div>
@@ -237,13 +285,8 @@
                         </div>
                     </div>
 
-                    <div class="social-bg">
-                        <div class="social">
-                            <span class="fab fa-facebook-f icon"></span>
-                            <span class="fab fa-twitter icon"></span>
-                            <span class="fab fa-instagram icon"></span>
-                        </div>
-                    </div>
+
+
                 </div>
 
             </div>
@@ -254,173 +297,236 @@
 
     <!--BOTTOM PRODUCTS CARD-->
     <div class="bottom-products-container">
+
         <div class='bottom-products-section'>
 
-            <div class="swiper bottom-swiper">
-                <div class="swiper-wrapper ">
+            <div class="container">
+                <div class="swiper bottom-swiper">
 
-                    <div class="swiper-slide">
-                        <div class="cards-bottom">
-                            <div class="bottom-products-item">
-                                <img src="images/hero-section/nike-adapt-bb-smart.png " class="bottom-products-img me-5"
-                                    alt="">
+                    <div class="swiper-wrapper ">
+
+                        <div class="swiper-slide">
+                            <div class="cards-bottom">
+                                <div class="bottom-products-item">
+                                    <img src="images/hero-section/nike-adapt-bb-smart.png "
+                                        class="bottom-products-img me-5" alt="">
+                                </div>
+                                <div class="bottom-products-content">
+                                    <h5 class="bottom-card-title ">Nike Air Premium</h5>
+                                    <span class="bottom-category">Shoes collection</span>
+                                    <div class="bottom-card-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <div class="bottom-card-footer">
+                                        <p class="bottom-card-text mb-0 ">$199</p>
+                                        <!-- <p class="bottom-colors"><small class="">3 colors</small></p> -->
+                                        <ion-icon name="bag-outline" class='bottom-bag'></ion-icon>
+                                    </div>
+                                </div>
+
                             </div>
-                            <div class="bottom-products-content">
-                                <h5 class="bottom-card-title ">Nike Air Premium</h5>
-                                <p class="bottom-card-text mb-0 ">$199</p>
-                                <div class="bottom-card-footer">
-                                    <p class="bottom-colors"><small class="">3 colors</small></p>
-                                    <ion-icon name="bag-outline" class='bottom-bag'></ion-icon>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="cards-bottom">
+                                <div class="bottom-products-item">
+                                    <img src="images/hero-section/nike-adapt-bb-smart.png "
+                                        class="bottom-products-img me-5" alt="">
+                                </div>
+                                <div class="bottom-products-content">
+                                    <h5 class="bottom-card-title ">Nike Air Premium</h5>
+                                    <span class="bottom-category">Shoes collection</span>
+                                    <div class="bottom-card-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <div class="bottom-card-footer">
+                                        <p class="bottom-card-text mb-0 ">$199</p>
+                                        <!-- <p class="bottom-colors"><small class="">3 colors</small></p> -->
+                                        <ion-icon name="bag-outline" class='bottom-bag'></ion-icon>
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="swiper-slide">
-                        <div class="cards-bottom">
-                            <div class="bottom-products-item">
-                                <img src="images/hero-section/nike-adapt-bb-smart.png " class="bottom-products-img me-5"
-                                    alt="">
-                            </div>
-                            <div class="bottom-products-content">
-                                <h5 class="bottom-card-title ">Nike Air Premium</h5>
-                                <p class="bottom-card-text mb-0 ">$199</p>
-                                <div class="bottom-card-footer">
 
-                                    <p class="bottom-colors"><small class="">3 colors</small></p>
-                                    <ion-icon name="bag-outline" class='bottom-bag'></ion-icon>
+                        <div class="swiper-slide">
+                            <div class="cards-bottom">
+                                <div class="bottom-products-item">
+                                    <img src="images/hero-section/nike-adapt-bb-smart.png "
+                                        class="bottom-products-img me-5" alt="">
+                                </div>
+                                <div class="bottom-products-content">
+                                    <h5 class="bottom-card-title ">Nike Air Premium</h5>
+                                    <span class="bottom-category">Shoes collection</span>
+                                    <div class="bottom-card-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <div class="bottom-card-footer">
+                                        <p class="bottom-card-text mb-0 ">$199</p>
+                                        <!-- <p class="bottom-colors"><small class="">3 colors</small></p> -->
+                                        <ion-icon name="bag-outline" class='bottom-bag'></ion-icon>
 
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
 
-                    <div class="swiper-slide">
-                        <div class="cards-bottom">
-                            <div class="bottom-products-item">
-                                <img src="images/hero-section/nike-adapt-bb-smart.png " class="bottom-products-img me-5"
-                                    alt="">
-                            </div>
-                            <div class="bottom-products-content">
-                                <h5 class="bottom-card-title ">Nike Air Premium</h5>
-                                <p class="bottom-card-text mb-0 ">$199</p>
-                                <div class="bottom-card-footer">
-
-                                    <p class="bottom-colors"><small class="">3 colors</small></p>
-                                    <ion-icon name="bag-outline" class='bottom-bag'></ion-icon>
-
+                        <div class="swiper-slide">
+                            <div class="cards-bottom">
+                                <div class="bottom-products-item">
+                                    <img src="images/hero-section/nike-adapt-bb-smart.png "
+                                        class="bottom-products-img me-5" alt="">
+                                </div>
+                                <div class="bottom-products-content">
+                                    <h5 class="bottom-card-title ">Nike Air Premium</h5>
+                                    <span class="bottom-category">Shoes collection</span>
+                                    <div class="bottom-card-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <div class="bottom-card-footer">
+                                        <p class="bottom-card-text mb-0 ">$199</p>
+                                        <!-- <p class="bottom-colors"><small class="">3 colors</small></p> -->
+                                        <ion-icon name="bag-outline" class='bottom-bag'></ion-icon>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
 
-                    <div class="swiper-slide">
-                        <div class="cards-bottom">
-                            <div class="bottom-products-item">
-                                <img src="images/hero-section/nike-adapt-bb-smart.png " class="bottom-products-img me-5"
-                                    alt="">
-                            </div>
-                            <div class="bottom-products-content">
-                                <h5 class="bottom-card-title ">Nike Air Premium</h5>
-                                <p class="bottom-card-text mb-0 ">$199</p>
-                                <div class="bottom-card-footer">
+                        <div class="swiper-slide">
+                            <div class="cards-bottom">
+                                <div class="bottom-products-item">
+                                    <img src="images/hero-section/nike-adapt-bb-smart.png "
+                                        class="bottom-products-img me-5" alt="">
+                                </div>
+                                <div class="bottom-products-content">
+                                    <h5 class="bottom-card-title ">Nike Air Premium</h5>
+                                    <span class="bottom-category">Shoes collection</span>
+                                    <div class="bottom-card-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <div class="bottom-card-footer">
+                                        <p class="bottom-card-text mb-0 ">$199</p>
+                                        <!-- <p class="bottom-colors"><small class="">3 colors</small></p> -->
+                                        <ion-icon name="bag-outline" class='bottom-bag'></ion-icon>
 
-                                    <p class="bottom-colors"><small class="">3 colors</small></p>
-                                    <ion-icon name="bag-outline" class='bottom-bag'></ion-icon>
-
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
 
-                    <div class="swiper-slide">
-                        <div class="cards-bottom">
-                            <div class="bottom-products-item">
-                                <img src="images/hero-section/nike-adapt-bb-smart.png " class="bottom-products-img me-5"
-                                    alt="">
+                        <div class="swiper-slide">
+                            <div class="cards-bottom">
+                                <div class="bottom-products-item">
+                                    <img src="images/hero-section/nike-adapt-bb-smart.png "
+                                        class="bottom-products-img me-5" alt="">
+                                </div>
+                                <div class="bottom-products-content">
+                                    <h5 class="bottom-card-title ">Nike Air Premium</h5>
+                                    <span class="bottom-category">Shoes collection</span>
+                                    <div class="bottom-card-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <div class="bottom-card-footer">
+                                        <p class="bottom-card-text mb-0 ">$199</p>
+                                        <!-- <p class="bottom-colors"><small class="">3 colors</small></p> -->
+                                        <ion-icon name="bag-outline" class='bottom-bag'></ion-icon>
+
+                                    </div>
+                                </div>
+
                             </div>
-                            <div class="bottom-products-content">
-                                <h5 class="bottom-card-title ">Nike Air Premium</h5>
-                                <p class="bottom-card-text mb-0 ">$199</p>
-                                <div class="bottom-card-footer">
+                        </div>
 
-                                    <p class="bottom-colors"><small class="">3 colors</small></p>
-                                    <ion-icon name="bag-outline" class='bottom-bag'></ion-icon>
 
+                        <div class="swiper-slide">
+                            <div class="cards-bottom">
+                                <div class="bottom-products-item">
+                                    <img src="images/hero-section/nike-adapt-bb-smart.png "
+                                        class="bottom-products-img me-5" alt="">
+                                </div>
+                                <div class="bottom-products-content">
+                                    <h5 class="bottom-card-title ">Nike Air Premium</h5>
+                                    <span class="bottom-category">Shoes collection</span>
+                                    <div class="bottom-card-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <div class="bottom-card-footer">
+                                        <p class="bottom-card-text mb-0 ">$199</p>
+                                        <!-- <p class="bottom-colors"><small class="">3 colors</small></p> -->
+                                        <ion-icon name="bag-outline" class='bottom-bag'></ion-icon>
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
+                        <div class="swiper-slide">
+                            <div class="cards-bottom">
+                                <div class="bottom-products-item">
+                                    <img src="images/hero-section/nike-adapt-bb-smart.png "
+                                        class="bottom-products-img me-5" alt="">
+                                </div>
+                                <div class="bottom-products-content">
+                                    <h5 class="bottom-card-title ">Nike Air Premium</h5>
+                                    <span class="bottom-category">Shoes collection</span>
+                                    <div class="bottom-card-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <div class="bottom-card-footer">
+                                        <p class="bottom-card-text mb-0 ">$199</p>
+                                        <!-- <p class="bottom-colors"><small class="">3 colors</small></p> -->
+                                        <ion-icon name="bag-outline" class='bottom-bag'></ion-icon>
 
-                    <div class="swiper-slide">
-                        <div class="cards-bottom">
-                            <div class="bottom-products-item">
-                                <img src="images/hero-section/nike-adapt-bb-smart.png " class="bottom-products-img me-5"
-                                    alt="">
-                            </div>
-                            <div class="bottom-products-content">
-                                <h5 class="bottom-card-title ">Nike Air Premium</h5>
-                                <p class="bottom-card-text mb-0 ">$199</p>
-                                <div class="bottom-card-footer">
-
-                                    <p class="bottom-colors"><small class="">3 colors</small></p>
-                                    <ion-icon name="bag-outline" class='bottom-bag'></ion-icon>
-
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
+
                     </div>
 
-
-                    <div class="swiper-slide">
-                        <div class="cards-bottom">
-                            <div class="bottom-products-item">
-                                <img src="images/hero-section/nike-adapt-bb-smart.png " class="bottom-products-img me-5"
-                                    alt="">
-                            </div>
-                            <div class="bottom-products-content">
-                                <h5 class="bottom-card-title ">Nike Air Premium</h5>
-                                <p class="bottom-card-text mb-0 ">$199</p>
-                                <div class="bottom-card-footer">
-
-                                    <p class="bottom-colors"><small class="">3 colors</small></p>
-                                    <ion-icon name="bag-outline" class='bottom-bag'></ion-icon>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="cards-bottom">
-                            <div class="bottom-products-item">
-                                <img src="images/hero-section/nike-adapt-bb-smart.png " class="bottom-products-img me-5"
-                                    alt="">
-                            </div>
-                            <div class="bottom-products-content">
-                                <h5 class="bottom-card-title ">Nike Air Premium</h5>
-                                <p class="bottom-card-text mb-0 ">$199</p>
-                                <div class="bottom-card-footer">
-
-                                    <p class="bottom-colors"><small class="">3 colorss</p>
-                                    <ion-icon name="bag-outline" class='bottom-bag'></ion-icon>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-
-                <!-- <div class="swiper-button-prev"></div>
+                    <!-- <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div> -->
 
+                </div>
             </div>
+
 
             <!-- <div class="cards-bottom">
                 <div class="bottom-products-item">
@@ -618,12 +724,20 @@
                             <p class="long-text text-white">This is a wider card with supporting text below as a
                                 natural
                                 lead-in to additional content. This content is a little bit longer.</p>
-                            <p class="update-time-text mb-5"><small class="">Last updated 3 mins
+                            <p class="update-time-text mb-5 text-white"><small class="">Last updated 3 mins
                                     ago</small>
                             </p>
                             <div class="big-card-button-area">
                                 <!-- <span class="fa fa-shopping-cart shopping-cart " aria-hidden="true"></span> -->
-                                <a class="big-card-add-cart " href="#" type="button">Add To Cart</a>
+                                <!-- <a class="big-card-add-cart " href="#" type="button">Add To Cart</a> -->
+                                <div class="button-class">
+                                    <ion-icon name="bag-outline" class="cart-bag"></ion-icon>
+                                    <button class="hero-button">
+                                        <!-- <ion-icon name="bag-outline" class="cart-bag"></ion-icon>-->
+                                        <span> Add to
+                                            Cart</span>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>

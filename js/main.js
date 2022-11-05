@@ -13,15 +13,15 @@ $(function () {
 // Swiper
 var swiper = new Swiper(".home-swiper", {
     spaceBetween: 30,
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-        center: true
-    },
-    // autoplay: {
-    //     delay: 5000,
-
+    // pagination: {
+    //     el: ".swiper-pagination",
+    //     clickable: true,
+    //     center: true
     // },
+    autoplay: {
+        delay: 5000,
+
+    },
     breakpoints: {
         0: {
             slidesPerView: 1,
@@ -45,28 +45,48 @@ var swiper = new Swiper(".home-swiper", {
 // Swiper
 var swiper = new Swiper(".bottom-swiper", {
     slidesPerView: 3,
-    SlidesPerGroup: 3,
     loop: true,
     loopFillGroupWithBlank: true,
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
+    centerSlides: true,
+    // pagination: {
+    //     el: ".swiper-pagination",
+    //     clickable: true,
+    // },
     autoplay: {
         delay: 3000,
     },
 
     breakpoints: {
-        0: {
+
+        1400: {
             slidesPerView: 3,
-        },
-        768: {
-            slidesPerView: 3,
-        },
-        991: {
-            slidesPerView: 3,
+            spaceBetween: 10,
         },
 
+        1200: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+        },
+        // 1000: {
+        //     slidesPerView: 3,
+        //     spaceBetween: 10,
+        // },
+        768: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+        },
+        484: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+        },
+        280: {
+            slidesPerView: 1,
+            spaceBetween: 1,
+        },
+        100: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+        },
     },
 
     // Navigation arrows
