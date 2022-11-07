@@ -9,18 +9,11 @@ $(function () {
     });
 });
 
-
 // Swiper
 var swiper = new Swiper(".home-swiper", {
     spaceBetween: 30,
-    // pagination: {
-    //     el: ".swiper-pagination",
-    //     clickable: true,
-    //     center: true
-    // },
     autoplay: {
         delay: 5000,
-
     },
     breakpoints: {
         0: {
@@ -34,11 +27,11 @@ var swiper = new Swiper(".home-swiper", {
         },
 
     },
-    // Navigation arrows
-    // navigation: {
-    //     nextEl: '.swiper-button-next',
-    //     prevEl: '.swiper-button-prev',
-    // },
+
+    pagination: {
+        el: '.hero-slider-pagination',
+        clickable: true,
+    }
 });
 
 
@@ -114,3 +107,22 @@ $(function () {
     })
 });
 
+
+//Mobile Nav Icons
+/*-------------*/
+// $(document).ready(function () {
+//     $('.mobile-nav-items').click(function () {
+//         $('.header-wrap').toggleClass('show')
+//     })
+// })
+
+const mobileNavbar = document.querySelector('.mobile-nav-items');
+const nav = document.querySelector('.header-wrap');
+
+const toggleNavbar = () => {
+    nav.classList.toggle('show')
+}
+
+mobileNavbar.addEventListener('click', () => {
+    toggleNavbar()
+})

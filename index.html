@@ -79,7 +79,6 @@
 
 
 
-
     <!-- <aside>
         <div class="side-menu-btn">
             <i class="fa fa-bars text-white"></i>
@@ -92,16 +91,26 @@
     </aside> -->
 
 
+
+    <!--  <nav>
+            <div class="openMenu"><i class="fa fa-bars"></i></div>
+            <ul class="mainMenu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">About</a></li>
+                <div class="closeMenu"><i class="fas fa-times"></i></div>
+                <span class="icons">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-github"></i>
+                </span>
+            </ul>
+        </nav> -->
+
     <header class="header-wrap">
-
-        <aside>
-            <div class="">
-                <a class="navbar-brand" href="#"><img class="logo-image" src="./images/logo/ecommerce-web-logo.png"
-                        alt=""></a>
-            </div>
-
-        </aside>
-
+        <a class="navbar-brand" href="#"><img class="logo-image" src="./images/logo/ecommerce-web-logo.png" alt=""></a>
         <nav class="navigation-container">
             <ul class="nav-menu">
                 <li class="">
@@ -126,12 +135,25 @@
                 <li class="">
                     <a class="" href="#"><span class="far fa-heart"></span></a>
                 </li>
+
+                <span class="mobile-social-icons">
+                    <li class="fab fa-facebook-f text-white"></li>
+                    <li class="fab fa-twitter  text-white"></li>
+                    <li class="fab fa-instagram text-white"></li>
+                </span>
             </ul>
         </nav>
 
         <div class="mobile-nav-items">
-            <i class="fa fa-bars text-white menu-btn"></i>
-            <i class="fas fa-times text-white close-btn"></i>
+            <ion-icon name="menu-outline" class="menu-icon"></ion-icon>
+            <ion-icon name="close-outline" class="close-icon "></ion-icon>
+        </div>
+
+        <div class="side-search-area">
+            <div class="search">
+                <!-- <input class="search-input form-control" placeholder="Search your need...." type="text"> -->
+                <ion-icon class="search-icon" name="search-outline"></ion-icon>
+            </div>
         </div>
 
     </header>
@@ -291,7 +313,7 @@
 
             </div>
         </div>
-        <!-- <div class="swiper-pagination"></div> -->
+        <div class="hero-slider-pagination"></div>
 
     </div>
 
