@@ -12,9 +12,9 @@ $(function () {
 // Swiper
 var swiper = new Swiper(".home-swiper", {
     spaceBetween: 30,
-    // autoplay: {
-    //     delay: 5000,
-    // },
+    autoplay: {
+        delay: 5000,
+    },
     breakpoints: {
         0: {
             slidesPerView: 1,
@@ -32,7 +32,9 @@ var swiper = new Swiper(".home-swiper", {
         el: '.hero-slider-pagination',
         clickable: true,
     }
+
 });
+
 
 
 // Swiper
@@ -41,6 +43,7 @@ var swiper = new Swiper(".bottom-swiper", {
     loop: true,
     loopFillGroupWithBlank: true,
     centerSlides: true,
+    slidesPerView: 'auto',
     // pagination: {
     //     el: ".swiper-pagination",
     //     clickable: true,
@@ -53,33 +56,31 @@ var swiper = new Swiper(".bottom-swiper", {
 
         1400: {
             slidesPerView: 3,
-            spaceBetween: 10,
+            spaceBetween: 2,
         },
 
         1200: {
-            slidesPerView: 2,
+            slidesPerView: 3,
             spaceBetween: 10,
         },
-        // 1000: {
-        //     slidesPerView: 3,
-        //     spaceBetween: 10,
-        // },
+
         768: {
-            slidesPerView: 1,
-            spaceBetween: 10,
+            slidesPerView: 2,
+            spaceBetween: 30,
         },
-        484: {
+
+
+        667: {
             slidesPerView: 1,
             spaceBetween: 20,
         },
+
+
         280: {
             slidesPerView: 1,
             spaceBetween: 1,
         },
-        100: {
-            slidesPerView: 1,
-            spaceBetween: 10,
-        },
+
     },
 
     // Navigation arrows
@@ -108,21 +109,37 @@ $(function () {
 });
 
 
-//Mobile Nav Icons
-/*-------------*/
-// $(document).ready(function () {
-//     $('.mobile-nav-items').click(function () {
-//         $('.header-wrap').toggleClass('show')
-//     })
-// })
-
 const mobileNavbar = document.querySelector('.mobile-nav-items');
 const nav = document.querySelector('.header-wrap');
 
 const toggleNavbar = () => {
     nav.classList.toggle('show')
+    // console.log('TOGGLE')
 }
 
 mobileNavbar.addEventListener('click', () => {
-    toggleNavbar()
-})
+    toggleNavbar();
+});
+
+
+
+
+const sideMenuIcon = document.querySelector('.menu-image');
+const sidebar = document.querySelector('.side-menu-items');
+const sideMenuClose = document.querySelector('.close-icon');
+
+sideMenuIcon.addEventListener('click', () => {
+    toggleSidebar()
+});
+
+sideMenuClose.addEventListener('click', () => {
+    toggleSidebar()
+});
+
+const toggleSidebar = () => {
+    sidebar.classList.toggle('active');
+
+};
+
+
+
