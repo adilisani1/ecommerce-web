@@ -1253,11 +1253,12 @@ position: relative;
 
 
 /* Shopping Page CSS *//* Shopping Page CSS *//* Shopping Page CSS */
-
-.shopping-banner{
+.shopping-banner-wrapper{
+    padding: 14rem 0rem 0rem 0rem;
+}
+.shopping-banner-wrapper .shopping-banner{
     /* background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
     box-shadow: 0 10px 32px 0 rgba(0, 0, 0, 0.4); */
-    margin: 10rem 0 10rem 0;
     background-image: url(../images/hero-section/woman-shopping.jpg) ;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1266,19 +1267,18 @@ position: relative;
     align-items: center;
     display: flex;
     justify-content: center;
-    background-position: center center;
-    height: 750px;
+    height: 600px;
     z-index: -1;
     position: relative;
     
 }
-.shopping-banner::before{
+.shopping-banner-wrapper .shopping-banner::before{
     content:"";
     position: absolute;
     top:0;
     width: 100%;
     left: 0;
-    height:750px;
+    height:600px;
     opacity: .5;
     background-color: rgba(0, 0, 0, 0.8);
 }
@@ -1322,83 +1322,146 @@ position: relative;
 
 .shopping-content span {
 
-    font-size: 6rem;
+        font-size: 6rem;
         font-family: var(--Raleway);
         font-weight: 800;
         color: var(--white);
         text-transform: uppercase;
         font-style: italic;
         background-size: 100%;
-    margin-right: 1rem;
+        margin-right: 1rem;
 }
 
 
 
-/* Cart Page CSS */
-/* Cart Page CSS */
-/* Cart Page CSS */
-.cart-container {
-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    width: 1200px;
-    height: 600px;
-    text-align: center;
-    position: relative;
-     padding: 0;
-     z-index: -1;
-    align-items: center;
-    background-color:#F5F6F6;
-    margin-top: 10%;
-  
-}
+/* -------------------------Cart Page CSS---------------------------------*/
+/* -------------------------Cart Page CSS-------------------------------*/
+/* -------------------------Cart Page CSS------------------------------*/
 
-.cart-container .cart-data {
+.cart-data {
     display: flex;
+    width: calc(100% - 90px);
+    position: relative;
+    left: 90px;
+    margin-top: 15%;
+}
+
+.cart-data .cart-items-box {
+    padding: 20px;
+    width: 60%;
+    border-bottom: .1rem solid #c0c0c02d;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(#353840, #131314); 
+    display: flex;
+    height: 200px;
     align-items: center;
+    overflow: hidden;
+    margin-right: 4rem;
+   
+}
+
+.cart-product-content{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 100%;
+}
+
+.cart-product-content img{
+    width:10%
+}
+
+.cart-product-name{
+
+}
+.quantity {
+
+}
+
+.cart-payment-box{
+    display: block;
+    position: relative;
+    padding: 25px;
+    height:450px;
+    width: 40%;
+    background-color: #fff;
+}
+.payment-data .txt{
+    font-family: var(--Raleway);
+    font-size: 1.5rem;
+    font-weight: 500;
+    }
+    .payment-data .promocode{
+        font-family: var(--Raleway);
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-decoration: none;
+    }
+
+    .payment-data .sub-total-text{
+        font-family: var(--Raleway);
+    font-size: 2rem;
+    font-weight: 600;
+    text-decoration: none;
+    }
+    
+    .payment-data .price-txt{
+        font-family: var(--Poppins);
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-decoration: none;
+    }
+    .payment-data .total-price{
+        font-family: var(--Poppins);
+    font-size: 2rem;
+    font-weight: 600;
+    text-decoration: none;
+    }
+
+
+.summary-title{
+    margin-bottom:2rem ;
+    padding-bottom: 1.5rem;
+}
+
+.summary-title h3 {
+    font-size:2.5rem;
+    font-family: var(--Raleway);
+    font-weight: 600;
+}
+
+.cart-payment-box .sub-total {
+    display: flex;
+    margin-top: 5rem;
+    padding-top: 1.5rem;
+    margin-bottom: 5rem;
     width: 100%;
     justify-content: space-between;
+ 
 }
+.cart-payment-box .checkout-btn{
+   border:none;
 
-.card-data .cart-box {
-    height: 60vh;
-    width: 400px;
-background-color: #3F4048;
-
-}
-.card-data .cart-box-two {
-    height: 60vh;
-    width: 200px;
-    background-color: #3F4048;
-
-}
-/* .cart-container .cart {
-    padding: 2rem;
-    position: relative;
-}
-
-.cart .cart-head-text {
-   display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.payment-card{
-    height: 500px;
-    width: 300px;
-    border-radius: 2%;
-    background-color: #3F4048;
-    position: relative;
+   background-color: #333333;
+   width: 100%;
 box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+   padding: 1.5rem;
+   font-family: var(--Raleway);
+   border-radius:2%;
+   color: white;
+   font-size: 1.8rem;
+   letter-spacing: 2px;
+   text-transform: uppercase;
+   font-weight: 600;
 }
 
-.cart-head-text p {
-    flex: 1;
-    color: #3F4048;
-    font-size: 1.2rem;
-    font-weight: 700;
-    font-family: var(--Montserrat)
-} */
 
+.cart-payment-box .checkout-btn:hover {
+
+    background-color: #fc5800;
+
+
+}
 
 /* Footer- */
 .footer-wrapper {
@@ -1865,6 +1928,31 @@ background: var(--main-bg);
         backdrop-filter: blur(10px);
         box-shadow: 0 10px 32px 0 rgb(0 0 0 / 40%);
     }
+
+
+
+        /* -------------------------Cart Page CSS---------------------------------*/
+        /* -------------------------Cart Page CSS-------------------------------*/
+        /* -------------------------Cart Page CSS------------------------------*/
+    
+        .cart-data {
+            display: block;
+            width: 100%;
+            left: 0;
+            margin-top: 25%;
+        }
+
+     .cart-payment-box {
+        width: 100%;
+
+        }
+.cart-data .cart-items-box {
+    width: 100%;
+    justify-content: center;
+     display:flex;
+ 
+}
+
 
         .footer-container {
             margin-bottom: 6rem;
