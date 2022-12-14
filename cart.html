@@ -83,7 +83,7 @@
                         </ion-icon>
                     </li>
                     <li class="">
-                        <a class="" aria-current="page" href="#">Home</a>
+                        <a class="" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="">
                         <a class="" href="shop.html">Shop</a>
@@ -98,7 +98,7 @@
                     <li class="position-relative">
                         <a class="" href="cart.html">
                             <ion-icon name="bag-outline"></ion-icon>
-
+                            <span class="cart-count-badge"> 0 </span>
                         </a>
                     </li>
 
@@ -125,43 +125,6 @@
         </div>
     </header>
 
-    <!-- <section class="container">
-        <div class="cart-container">
-            <div class="cart">
-                <div class="cart-head-text">
-                    <p>Product</p>
-                    <p>Quantity</p>
-                    <p>Price</p>
-                </div>
-
-                <div class="cart-items">
-                    <img src="" alt="" class="">
-                    <button class="btn btn-danger btn-sm">-</button>
-                    <span class="badge bg-success">1</span>
-                    <button class="btn btn-primary btn-sm">+</button>
-                </div>
-
-                <div class="payment-card">
-                    <div class="payment-inner">
-                        <div></div>
-                    </div>
-                </div>
-            </div>
-
-
-        </div>
-    </section> -->
-
-    <!-- <section class="container cart-container">
-        <div class="cart-data">
-            <div class="cart-box">
-                <div class="">abc</div>
-            </div>
-            <div class="cart-box-two">
-                <div class="">abc</div>
-            </div>
-        </div>
-    </section> -->
     <section class="container">
         <div class="cart-data">
             <div class="cart-items-box">
@@ -180,36 +143,51 @@
                     </div>
                 </div>-->
 
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
-                            <th scope="col">Handle</th>
+                <table class="table table-borderless table-shopping-cart">
+                    <thead class="text-muted">
+                        <tr class="small text-uppercase">
+                            <th scope="col">Product</th>
+                            <th scope="col" width="120">Quantity</th>
+                            <th scope="col" width="120">Price</th>
+                            <th scope="col" class="text-right d-none d-md-block" width="200"></th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
+                            <td class="align-baseline">
+                                <figure class="itemside align-items-center">
+                                    <div class="aside"><img src="images/main-section/iphone.png" class="img-sm">
+                                    </div>
+                                    <figcaption class="info"> <a href="#" class="cart-product-name"
+                                            data-abc="true">APPLE
+                                            IPHONE 12 PRO</a>
+                                        <p class="product-cat text-muted">Mobile Phone</p>
+                                    </figcaption>
+                                </figure>
+                            </td>
+
+                            <td class="align-baseline">
+                                <button class="quantity-btn">-</button>
+                                <span class="quantity-count">1</span>
+                                <button class="quantity-btn">+</button>
+                            </td>
+
+                            <td class="align-baseline">
+                                <div class="price-wrap">
+                                    <p class="price">$10.00</p>
+                                </div>
+                            </td>
+
+                            <td class="text-right d-none d-md-block"> <a href="" class="delete-product-btn"
+                                    data-abc="true">
+                                    x</a> </td>
                         </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td colspan="2">Larry the Bird</td>
-                            <td>@twitter</td>
-                        </tr>
+
                     </tbody>
                 </table>
             </div>
+
+
             <div class="cart-payment-box">
                 <div class="summary-title border-bottom ">
                     <h3>Cart Summary</h3>
@@ -222,7 +200,7 @@
                         <p class="txt">Shipping total</p><span class="price-txt">$119.00</span>
                     </div>
                     <div class="promo">
-                        <a class="promocode">Enter a promocode</a>
+                        <a class="promocode" href="#enter">Enter a promocode</a>
                     </div>
                     <div class="sub-total border-top ">
                         <p class="sub-total-text">Subtotal</p>
