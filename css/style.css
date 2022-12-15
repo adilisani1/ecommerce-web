@@ -1866,18 +1866,19 @@ background: var(--main-bg);
     }
 
     .shoe-img img {
-        margin-bottom: 2rem;
-        margin-top: 4rem;
+        margin-bottom: 4rem;
+        margin-top: 30%;
     }
 
     .imac-img img {
 
-        margin-top: 4rem;
+            margin-top: 30%;
     }
 
     .watch-img img {
 
-        margin-top: 4rem;
+ 
+        margin-top: 30%;
     }
 
 
@@ -1929,18 +1930,20 @@ background: var(--main-bg);
 
 
     .navigation-container {
-        position: fixed;
-        left: -100%;
-        z-index: 2;
-        align-items: center;
-        height: 100vh;
-        width: 100%;
-        background-color: #2f3640;
-        justify-content: flex-start;
-        text-align: left;
-        transition: all 1s ease;
-        top: 100px;
-        padding-left: 0;
+            position: fixed;
+                left: -100%;
+                z-index: 2;
+                align-items: center;
+                bottom: 0;
+                width: 100%;
+                background-color: #2f3640;
+                justify-content: flex-start;
+                text-align: left;
+                transition: all 1s ease;
+                top: 90px;
+                padding-left: 0;
+                overflow-y: scroll;
+                overflow-x: hidden;
 
     }
 
@@ -1997,7 +2000,17 @@ background: var(--main-bg);
         align-items: center
   
     }
+ .bottom-slider {
+position: relative;
+    bottom: auto;
+    padding: 2rem 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 32px 0 rgb(0 0 0 / 40%);
+ }
+   
 }
+
 
 @media (max-width: 767px) {
 
@@ -2064,7 +2077,7 @@ background: var(--main-bg);
         left: -100%;
         z-index: 2;
         align-items: center;
-        height: 100vh;
+        bottom: 0;
         width: 100%;
         background-color: #2f3640;
         justify-content: flex-start;
@@ -2072,6 +2085,8 @@ background: var(--main-bg);
         transition: all 1s ease;
         top: 90px;
         padding-left: 0;
+        overflow-y: scroll;
+            overflow-x: hidden;
 
     }
 
@@ -2225,7 +2240,6 @@ background: var(--main-bg);
             left: -100%;
             z-index: 2;
             align-items: center;
-            height: 100vh;
             width: 100%;
             background-color: #2f3640;
             justify-content: flex-start;
@@ -2268,6 +2282,21 @@ background: var(--main-bg);
         .show .mobile-nav-items .close-icon {
             display: block;
         }
+
+                .shoe-img img {
+                    margin-bottom: .6rem;
+                    margin-top: 10%;
+                }
+        
+                .imac-img img {
+                    margin-top: 8.5%;
+                }
+        
+                .watch-img img {
+        
+        
+                    margin-top: 10%;
+                }
 
         /* MAIN SECTION */
 /*------------------------------------*/
@@ -2436,7 +2465,12 @@ background: var(--main-bg);
 
 
 
-@media (max-width: 375px) {}
+@media (max-width: 375px) {
+    .shoe-img img {
+            margin-bottom: 4rem;
+            margin-top: 20%;
+        }
+}
 
 
 @media (max-width: 320px) {
