@@ -71,37 +71,38 @@ function MySwiperComponent(props) {
 
     return (
         <div>
-            <div className="swiper home-swiper">
+            <div className="swiper home-swiper " >
                 <div className="swiper-wrapper">
                     {props.products.map((item) => {
                         if (item.trending) {
                             return (
                                 <div className="swiper-slide" key={item.id}>
                                     <div className="container swiper-container">
-                                        <div className="row gy-5">
+                                        <div className="row gy-2">
                                             <div className="col-lg-6 d-flex flex-column justify-content-center  order-md-2 order-2 order-lg-1 ">
                                                 <div className="hero-text-section">
                                                     <h1 className="hero-title">NEW</h1>
                                                     <span className="hero-title-2">COLLECTION</span>
                                                     <p className="hero-text">Lorem Ipsum is simply dummy text of the printing and
                                                         typesetting industry.</p>
+                                                </div>
+                                                <div className="cart-button-items">
+                                                    <div>
+                                                        <p className="real-price">${item.oldPrice.toFixed(2)}</p>
+                                                        <span className="cut-off-price">${item.price.toFixed(2)}</span>
+                                                    </div>
+                                                    <div className="button-class">
+                                                        <ion-icon name="bag-outline" class="cart-bag"></ion-icon>
 
-                                                    <div className="cart-button-items">
-                                                        <div>
-                                                            <p className="real-price">${item.oldPrice.toFixed(2)}</p>
-                                                            <span className="cut-off-price">${item.price.toFixed(2)}</span>
-                                                        </div>
-
-                                                        <div className="button-class">
-                                                            <ion-icon name="bag-outline" class="cart-bag"></ion-icon>
-
-                                                            <button className="hero-button" onClick={() => props.featuredProduct(item)}>
-                                                                <span> Add to
-                                                                    Cart</span>
-                                                            </button>
-                                                        </div>
+                                                        <button className="hero-button" onClick={() => props.featuredProduct(item)}>
+                                                            <span> Add to
+                                                                Cart</span>
+                                                        </button>
                                                     </div>
                                                 </div>
+
+
+
                                             </div>
                                             <div className="col-lg-5 offset-lg-1 order-1 order-lg-2 order-md-1 shoe-img">
                                                 <img className="img-fluid" src={item.image} alt="" />

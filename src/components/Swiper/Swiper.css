@@ -11,6 +11,7 @@
 
 .home-swiper .swiper-container {
     padding: 8rem 6rem 8rem 6rem;
+    margin-top: -8rem;
 }
 
 .home-swiper .swiper-slide {
@@ -131,7 +132,7 @@
     display: inline-flex;
     align-items: center;
     position: relative;
-    z-index: -1;
+    
 }
  .cart-bag{
     margin-right: 1rem;
@@ -189,8 +190,6 @@
 .shoe-img img {
     width: 90%;
 }
-
-
 
 /* ===================BOTTOM PRODUCT CONtAINER==============================================*/
 /* ===================BOTTOM PRODUCT CONtAINER==============================================*/
@@ -307,4 +306,177 @@ t-bag .bottom-products-content .bottom-card-rating {
 
 .bottom-bag {
     color: var(--white);
+}
+
+/*RESPONSIVE Swiper Section*/
+@media(max-width: 991px) {
+    .hero-title {
+        font-size: 4.5rem;
+    }
+
+    .hero-title-2 {
+        font-size: 6rem;
+    }
+
+    .hero-text-section {
+        text-align: center;
+        width: 100%;
+    }
+
+    .hero-text {
+        font-size: 1.5rem;
+        width: 100%;
+    }
+
+    .cart-button-items .real-price {
+        font-size: 1.8rem;
+
+    }
+
+    .cart-button-items .cut-off-price {
+        font-size: 2.6rem;
+
+    }
+
+    .cart-bag {
+        font-size: 1.4rem;
+
+    }
+
+    .hero-button {
+        width: 180px;
+        height: 60px;
+
+    }
+
+    .hero-button span {
+        font-size: 1.4rem;
+
+    }
+
+    .circle-img {
+        margin-left: 2rem;
+    }
+
+    .shoe-img img {
+        margin: 0 auto;
+        display: block;
+        width: 50%;
+
+    }
+
+    .imac-img img {
+        margin: auto;
+        display: block;
+        width: 50%;
+    }
+
+    .watch-img img {
+        margin: auto;
+        display: block;
+        width: 35%;
+    }
+
+
+
+    .cart-button-items {
+        justify-content: center;
+
+    }
+}
+
+@media (max-width: 767px) {
+    .home-swiper .swiper-container {
+        padding: 15rem 0 8rem 0;
+    }
+        .home-swiper .swiper-container .shoe-img img {
+            max-width: 100%;
+            width: 70%;
+            margin: 1rem auto;
+            text-align: center;
+            display: flex;
+        }
+
+
+        .bottom-slider {
+            position: relative;
+            bottom: auto;
+            padding: srem 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 32px 0 rgb(0 0 0 / 40%);
+        }
+/* 
+           .cart-button-items {
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               margin: 0 auto;
+               padding: 0;
+    
+           } */
+}
+
+@media (max-width: 667px) {
+        .home-swiper .swiper-container .shoe-img img {
+                    max-width: 100%;
+                    width: 70%;
+                    margin:  1rem auto;
+                    text-align: center;
+                    display: flex;
+                }
+
+
+        .hero-text-section {
+            align-items: center;
+            display: block;
+            justify-content:center;
+            text-align: center;
+        }
+
+    .hero-title {
+        font-size: 6rem;
+    }
+
+    .hero-title-2 {
+        font-size: 5.2rem;
+    }
+
+    .hero-text {
+        font-size: 1.7rem;
+        margin: 1.5rem auto;
+    }
+
+      .hero-button{
+        width: 160px;
+        height:50px;
+       }
+       .hero-button span{
+        font-size: 1.2rem;
+       }
+   .cart-button-items {
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       margin: 0 auto;
+       padding: 0;
+
+   }
+              
+}
+@media (max-width: 425px) {
+.home-swiper .swiper-container .shoe-img img {
+        width: 50%;
+
+    }
+
+        .swiper-container .imac-img img {
+        width: 50%;
+
+    }
+
+        .swiper-container .watch-img img {
+        width: 40%;
+
+    }
 }

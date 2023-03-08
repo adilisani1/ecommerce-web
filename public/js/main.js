@@ -1,16 +1,3 @@
-
-//Navbar-Fixed
-
-$(function () {
-    $(window).on("scroll", function () {
-        if ($(window).scrollTop() > 50) {
-            $(".header-wrap").addClass("active");
-        } else {
-            $(".header-wrap").removeClass("active");
-        }
-    });
-});
-
 // Swiper
 var swiper = new Swiper(".home-swiper", {
     spaceBetween: 30,
@@ -44,10 +31,6 @@ var swiper = new Swiper(".bottom-swiper", {
     loopFillGroupWithBlank: true,
     centerSlides: true,
     slidesPerView: 'auto',
-    // pagination: {
-    //     el: ".swiper-pagination",
-    //     clickable: true,
-    // },
     autoplay: {
         delay: 3000,
     },
@@ -83,23 +66,12 @@ var swiper = new Swiper(".bottom-swiper", {
 
     },
 
-    // Navigation arrows
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
 });
 
-
-$(function () {
-    $(window).on("scroll", function () {
-        if ($(window).scrollTop() > 50) {
-            $(".header-wrap").addClass("active");
-        } else {
-            $(".header-wrap").removeClass("active");
-        }
-    });
-});
 
 
 $(function () {
@@ -108,38 +80,36 @@ $(function () {
     })
 });
 
-
 const mobileNavbar = document.querySelector('.mobile-nav-items');
 const nav = document.querySelector('.header-wrap');
 
 const toggleNavbar = () => {
     nav.classList.toggle('show')
-    // console.log('TOGGLE')
 }
 
 mobileNavbar.addEventListener('click', () => {
     toggleNavbar();
 });
 
+import React, { useState } from 'react';
 
+function Navbar() {
+    const [showNav, setShowNav] = useState(false);
 
+    const toggleNavbar = () => {
+        setShowNav(prevState => !prevState);
+    };
 
-const sideMenuIcon = document.querySelector('.menu-image');
-const sidebar = document.querySelector('.side-menu-items');
-const sideMenuClose = document.querySelector('.close-icon');
+    return (
+        <div>
+            <button className="mobile-nav-items" onClick={toggleNavbar}>Toggle Navbar</button>
+            <div className={`header-wrap ${showNav ? "show" : ""}`}>
+                {/* Navbar contents go here */}
+            </div>
+        </div>
+    );
+}
 
-sideMenuIcon.addEventListener('click', () => {
-    toggleSidebar()
-});
-
-sideMenuClose.addEventListener('click', () => {
-    toggleSidebar()
-});
-
-const toggleSidebar = () => {
-    sidebar.classList.toggle('active');
-
-};
 
 
 

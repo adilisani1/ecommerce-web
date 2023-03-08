@@ -1,22 +1,23 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Route, Routes, Outlet } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
-
 //pages
 import Home from "./pages/home/Home";
 import Shop from './pages/shop/Shop';
 import Cart from './pages/cart/Cart';
 import { Products } from './shared/products';
 
-
 function App() {
   const [products, setProducts] = useState(Products)
-  const [cartItems, setCartItems] = useState([]);
+  const [cartItems, setCartItems] = useState(
+    localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')) : []
+  );
 
   const removeItemFromCart = (itemId) => {
     const updatedCartItems = cartItems.filter(item => item.id !== itemId);
     setCartItems(updatedCartItems);
+    localStorage.setItem('cartItems', JSON.stringify(updatedCartItems))
   }
 
 
@@ -31,30 +32,23 @@ function App() {
         );
       }
       return [...prevCartItems, { ...item, quantity: 1 }];
+
     });
+
+    localStorage.setItem('cartItems', JSON.stringify(cartItems))
   };
 
-  const Layout = ({ children }) => {
-    return (
-      <div className="app">
-        <Navbar cartItems={cartItems} />
-        {children}
-        <Footer />
-      </div>
-    )
-  }
-  const createOrder = (order) => {
-    alert("Your order has been placed successfully ", order.name)
-  }
   return (
     <Router>
+      <Navbar cartItems={cartItems} />
       <div>
         <Routes >
-          <Route exact path="/" element={<Layout><Home products={products} onHandleClick={onAddToCart} /></Layout>} />
-          <Route exact path="/shop" element={<Layout><Shop products={products} onHandleClick={onAddToCart} /></Layout>} />
-          <Route exact path="/cart" element={<Layout><Cart cartItems={cartItems} onRemove={removeItemFromCart} createOrder={createOrder} /></Layout>} />
+          <Route exact path="/" element={<Home products={products} onHandleClick={onAddToCart} />} />
+          <Route exact path="/shop" element={<Shop products={products} onHandleClick={onAddToCart} />} />
+          <Route exact path="/cart" element={<Cart cartItems={cartItems} onRemove={removeItemFromCart} />} />
         </Routes>
       </div>
+      <Footer />
     </Router>
   );
 }

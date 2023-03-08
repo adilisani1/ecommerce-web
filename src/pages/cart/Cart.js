@@ -1,7 +1,28 @@
 import React, { useState } from 'react';
 import './Cart.css';
+// import { Modal, ModalBody, ModalHeader } from 'reactstrap';
+import Form from './../../components/form/Form';
+import { MyModal } from '../../utils/Modal';
 import { Modal, ModalBody, ModalHeader } from 'reactstrap';
+import { Table } from '../../utils/Table';
+
 const Cart = (props) => {
+    const [isCheckout, setIsCheckout] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
+    const [order, setOrder] = useState([]);
+    const [userData, setUserData] = useState({
+        name: "",
+        email: "",
+        address: "",
+    });
+
+    const handleChange = (event) => {
+        const { name, value } = event.target;
+        setUserData((prevState) => ({
+            ...prevState,
+            [name]: value,
+        }));
+    };
 
     const orderTotal = props.cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
     let shippingCost;
@@ -14,96 +35,28 @@ const Cart = (props) => {
     }
     const totalPrice = orderTotal + shippingCost;
 
-    const [userData, setUserData] = useState({
-        'name': "",
-        "email": "",
-        "address": "",
-    })
-    const { order } = props;
-    const [isCheckout, setIsCheckout] = useState(false);
-    const [isOpen, setIsOpen] = useState(false);
-
-    const handleChange = (e) => {
-        const name = e.target.name;
-        const value = e.target.value;
-
-        setUserData({ ...userData, [name]: value });
-    }
-
-    const createOrder = (e) => {
-        e.preventDefault();
-
+    const createOrder = (event) => {
+        event.preventDefault();
         const order = {
             name: userData.name,
             email: userData.email,
             address: userData.address,
             cartItems: props.cartItems,
-            orderTotal: totalPrice
+            total: totalPrice,
         }
-
-        console.log(order)
-        props.createOrder(order)
-
-    }
-
+        setOrder(order);
+        setIsOpen(true);
+    };
 
     return (
         <>
             <section className="container">
-
                 <div className="cart-data">
-
-
                     <div className="cart-items-box">
-
-                        <table className="table table-borderless table-shopping-cart">
-                            <thead className="text-muted">
-                                <tr className="small text-uppercase">
-                                    <th scope="col">Product</th>
-                                    <th scope="col" width="120">Quantity</th>
-                                    <th scope="col" width="120">Price</th>
-                                    <th scope="col" className="text-right d-none d-md-block" width="200"></th>
-                                </tr>
-                            </thead>
-
-                            <tbody>
-
-                                {props.cartItems.map((item) => (
-                                    <tr>
-                                        <td className="align-baseline">
-                                            <figure className="itemside align-items-center">
-                                                <div className="aside"><img src={item.image} className="img-sm" />
-                                                </div>
-                                                <figcaption className="info"> <a href="#" className="cart-product-name"
-                                                    data-abc="true">{item.name}</a>
-                                                    <p className="product-cat text-muted">{item.category}</p>
-                                                </figcaption>
-                                            </figure>
-                                        </td>
-
-                                        <td className="align-baseline">
-                                            <button className="quantity-btn">-</button>
-                                            <span className="quantity-count">{item.quantity}</span>
-                                            <button className="quantity-btn">+</button>
-                                        </td>
-
-                                        <td className="align-baseline">
-                                            <div className="price-wrap">
-                                                <p className="price">{item.price.toFixed(2)}</p>
-                                            </div>
-                                        </td>
-
-                                        <td className="text-right align-baseline"> <button onClick={() => props.onRemove(item.id)} className="delete-product-btn"
-                                        >
-                                            x</button> </td>
-                                    </tr>
-
-                                ))}
-
-                            </tbody>
-                        </table>
+                        <Table
+                            cartItems={props.cartItems}
+                            onRemove={props.onRemove} />
                     </div>
-
 
                     <div className="cart-payment-box">
                         <div className="summary-title border-bottom ">
@@ -116,14 +69,10 @@ const Cart = (props) => {
                             <div className="shipping d-flex justify-content-between">
                                 <p className="txt">Shipping total</p><span className="price-txt">${shippingCost.toFixed(2)}</span>
                             </div>
-                            {/* <div className="promo">
-                                <a className="promocode" href="#enter">Enter a promocode</a>
-                            </div> */}
                             <div className="sub-total border-top ">
                                 <p className="sub-total-text">Subtotal</p>
                                 <span className="total-price">${(totalPrice.toFixed(2))}</span>
                             </div>
-
                         </div>
                         <div className="checkout">
                             <button className="checkout-btn" onClick={() => setIsCheckout(true)}>Proceed</button>
@@ -132,70 +81,31 @@ const Cart = (props) => {
 
                 </div>
 
-                {/*Modal*/}
-                {/* {order &&
+                {order && (
                     <div className="modal-checkout">
                         <div className="modal-inner">
-                            <Modal isOpen={this.state.isOpen} toggle={!this.state.isOpen} >
-                                <ModalHeader>
-                                    Order: {order._id}
-                                </ModalHeader>
-                                <ModalBody>
-                                    <div>
-                                        Name: {order.name}
-                                    </div>
-                                    <div>
-                                        Email: {order.email}
-                                    </div>
-                                    <div>
-                                        Address: {order.address}
-                                    </div>
-                                </ModalBody>
-                            </Modal>
+                            <MyModal
+                                isOpen={isOpen}
+                                setIsOpen={setIsOpen}
+                                order={order}
+                            />
                         </div>
-
                     </div>
-                } */}
+                )}
 
-
-
-
-                {isCheckout && (
-                    <div className="cart form-container">
-                        <form onSubmit={createOrder}>
-                            <input
-                                className="form-control mb-4"
-                                value={userData.name}
-                                name="name"
-                                onChange={handleChange}
-                                required
-                                type="text"
-                                placeholder="Your Name" />
-                            <input
-                                className="form-control mb-4 "
-                                name="email"
-                                value={userData.email}
-                                onChange={handleChange}
-                                required
-                                type="email"
-                                placeholder="Your Email" />
-                            <input
-                                className="form-control mb-4"
-                                name="address"
-                                onChange={handleChange}
-                                required
-                                type="text"
-                                value={userData.address}
-                                placeholder="Your Address" />
-
-                            <button className="btn btn-primary">Check out</button>
-                        </form>
-                    </div>
-                )
-                }
-
+                {props.cartItems.length === 0 ? (
+                    <div className="alert text-white d-flex align-items-center">Please add items to your cart</div>
+                ) : (
+                    isCheckout && (
+                        <div className="cart form-container">
+                            <Form
+                                createOrder={createOrder}
+                                userData={userData}
+                                handleChange={handleChange} />
+                        </div>
+                    )
+                )}
             </section>
-
         </>
     )
 }

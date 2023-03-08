@@ -3,13 +3,12 @@ import './Home.css';
 import MySwiperComponent from '../../components/Swiper/Swiper';
 
 const Home = (props) => {
-
+    const [fav, setFav] = useState(false)
     const [activeCardId, setActiveCardId] = useState(11);
 
     const handleCardClick = (id) => {
         setActiveCardId(id);
     };
-
 
     return (
         <>
@@ -58,6 +57,8 @@ const Home = (props) => {
                                     </div>
                                 </div>
                             );
+                        } else {
+                            return <div></div>;
                         }
                     })}
                 </div>
@@ -66,6 +67,7 @@ const Home = (props) => {
 
             <div className="big-card-bg">
                 <div className="container">
+
                     <div className="big-card wa">
                         <div className="row mb-3 align-items-center  ">
 
@@ -84,10 +86,8 @@ const Home = (props) => {
                                         ago</small>
                                     </p>
                                     <div className="big-card-button-area">
-                                        {/* <!-- <span className="fa fa-shopping-cart shopping-cart " aria-hidden="true"></span> -->
-                                        <!-- <a className="big-card-add-cart " href="#" type="button">Add To Cart</a> --> */}
-                                        <div className="button-className">
-                                            <ion-icon name="bag-outline" className="cart-bag"></ion-icon>
+                                        <div className="button-class">
+                                            <ion-icon name="bag-outline" class="cart-bag"></ion-icon>
                                             <button className="hero-button" >
                                                 {/* <!-- <ion-icon name="bag-outline" className="cart-bag"></ion-icon>--> */}
                                                 <span> Add to Cart</span>
@@ -120,7 +120,7 @@ const Home = (props) => {
                                             <h2 className="product-title">{product.name}</h2>
                                             <p className="product-cat">{product.category}</p>
                                         </div>
-                                        <span className="far fa-heart text-white"></span>
+                                        <span className={`${fav ? 'fa fa-heart text-white' : 'far fa-heart text-white'} `} ></span>
                                     </div>
 
                                     <div className="products-img">
@@ -150,6 +150,8 @@ const Home = (props) => {
                                 </div>
 
                             )
+                        } else {
+                            return <div></div>
                         }
                     })}
 

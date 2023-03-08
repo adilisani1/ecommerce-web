@@ -1,8 +1,34 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Navbar.css';
 import { Link } from 'react-router-dom';
 
 const Navbar = (props) => {
+    const [showNav, setShowNav] = useState(false);
+
+    const [isActiveHeader, setIsActiveHeader] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    useEffect(() => {
+        function handleScroll() {
+            if (window.pageYOffset > 50) {
+                setIsActiveHeader(true);
+            } else {
+                setIsActiveHeader(false);
+            }
+        }
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    }
+
+    const toggleNavbar = () => {
+        setShowNav(prevState => !prevState);
+    };
 
     return (
         <>
@@ -10,7 +36,7 @@ const Navbar = (props) => {
             <section className="sidebar">
                 <div className="menu-area">
                     <div className="side-menu-icon">
-                        <img className="menu-image" src="./images/logo/menu-icon.svg" alt="" />
+                        <img className="menu-image" src="./images/logo/menu-icon.svg" alt="logo" onClick={toggleMenu} />
                     </div>
                     <ul className="social-icons">
                         <li><span className="fab fa-facebook-f icon text-white"></span></li>
@@ -22,23 +48,23 @@ const Navbar = (props) => {
 
 
             {/* <!--Side Menu Modal-- > */}
-            <div className="side-menu-items">
+            <div className={`side-menu-items ${isMenuOpen ? 'active' : ''} `} >
                 <div className="close">
-                    <ion-icon name="close-outline" className="close-icon"></ion-icon>
+                    <ion-icon name="close-outline" class="close-icon" onClick={toggleMenu}></ion-icon>
                 </div>
 
-                <ul className="nav-side-menu">
+                <ul className="nav-side-menu" onClick={toggleMenu}>
                     <li className="">
-                        <Link className="" aria-current="page" to="/">Home</Link>
+                        <Link className="" to="/">Home</Link>
                     </li>
                     <li className="">
                         <Link className="" to="/shop">Shop</Link>
                     </li>
                     <li className="">
-                        <a className="" href="#">Deals</a>
+                        <Link className="" to="/">Deals</Link>
                     </li>
                     <li className="">
-                        <a className="" href="#">Contact Us</a>
+                        <Link className="" to="/">Contact Us</Link>
                     </li>
                 </ul>
 
@@ -52,36 +78,36 @@ const Navbar = (props) => {
 
 
             {/* <!--Header--> */}
-            <header className="header-wrap">
+            <header className={`header-wrap ${isActiveHeader ? "active" : ""} ${showNav ? "show" : ""}`}>
                 <div className="header-inner ">
                     <div className="logo-area">
                         <Link className="navbar-brand text-muted" to="/">
-                            <img className="logo-image" src="./images/logo/ecommerce-web-logo.png" alt="" />
+                            <img className="logo-image" src="./images/logo/ecommerce-web-logo.png" alt="logo-img" />
                         </Link>
                     </div>
 
-                    <nav className="navigation-container ">
-                        <ul className="nav-menu">
+                    <nav className="navigation-container " >
+                        <ul className="nav-menu" >
                             <li className="mobile-search">
                                 <input type="text" className="form-control" placeholder="Search Product......." />
                                 <ion-icon className="search-mobile-icon text-white" name="search-outline">
                                 </ion-icon>
                             </li>
-                            <li className="">
-                                <Link className="" aria-current="page" to="/">Home</Link>
+                            <li className="" onClick={toggleNavbar}>
+                                <Link className="" to="/">Home</Link>
                             </li>
-                            <li className="">
+                            <li className="" onClick={toggleNavbar}>
                                 <Link className="" to="/shop">Shop</Link>
                             </li>
-                            <li className="">
-                                <a className="" href="#">Deals</a>
+                            <li className="" onClick={toggleNavbar}>
+                                <Link className="" to="/deals">Deals</Link>
                             </li>
-                            <li className="">
-                                <a className="" href="#">Contact Us</a>
+                            <li className="" onClick={toggleNavbar}>
+                                <Link className="" to="/contactus">Contact Us</Link>
                             </li>
 
                             <li className="position-relative">
-                                <Link className="" to="/cart">
+                                <Link className="" to="/cart" onClick={toggleNavbar}>
                                     <ion-icon name="bag-outline"></ion-icon>
                                     <span className="cart-count-badge"> {props.cartItems.length} </span>
                                 </Link>
@@ -95,14 +121,14 @@ const Navbar = (props) => {
 
                     </nav>
 
-                    <div className="mobile-nav-items">
-                        <ion-icon name="menu-outline" className="menu-icon text-white"></ion-icon>
-                        <ion-icon name="close-outline" className="close-icon text-white"></ion-icon>
+                    <div className="mobile-nav-items " onClick={toggleNavbar}>
+                        <ion-icon name="menu-outline" class="menu-icon text-white"></ion-icon>
+                        <ion-icon name="close-outline" class="close-icon text-white"></ion-icon>
                     </div>
 
                     <div className="side-search-area">
                         <div className="search">
-                            <ion-icon className="search-icon" data-bs-toggle="modal" data-bs-target="#search-box"
+                            <ion-icon class="search-icon" data-bs-toggle="modal" data-bs-target="#search-box"
                                 name="search-outline">
                             </ion-icon>
                         </div>
@@ -122,7 +148,7 @@ const Navbar = (props) => {
                         <div className="modal-search">
                             <div className="modal-search-inner">
                                 <input className="search-input form-control" placeholder="Search Product......." type="text" />
-                                <ion-icon className="search-icon text-white" name="search-outline">
+                                <ion-icon class="search-icon text-white" name="search-outline">
                                 </ion-icon>
                             </div>
                         </div>

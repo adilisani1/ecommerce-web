@@ -1,23 +1,22 @@
 
 /* Shopping Page CSS */
 .shopping-banner-wrapper {
-    padding: 10rem 0rem 0rem 0rem;
     width: calc(100% - 90px);
     position: relative;
     left: 90px;
-
 }
 
 .shopping-banner-wrapper .shopping-banner {
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center center;
     background-image: url(https://images.pexels.com/photos/1778412/pexels-photo-1778412.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
     width: 100%;
     text-align: center;
     align-items: center;
     display: flex;
     justify-content: center;
-    height: 835px;
+    height: 100vh;
     z-index: -1;
     position: relative;
 
@@ -29,7 +28,7 @@
     top: 0;
     width: 100%;
     left: 0;
-    height: 835px;
+height: 100vh;
     opacity: .5;
     background-color: rgba(0, 0, 0, 0.8);
 }
@@ -334,3 +333,46 @@
     top: 30%;
     right: 0;
 }
+
+
+/*RESPONSIVE Main Section*/
+@media (max-width: 767px) {
+    /* Shopping Page CSS */
+        .shopping-banner-wrapper {
+            width: 100% ;
+            left:0px;
+        }
+
+                .shopping-banner-wrapper .shopping-banner {
+                    background-size: center;
+                 
+        
+                }
+}
+
+@media (max-width: 667px) {
+/*Trending Products*/
+
+.container2 {
+        position: relative;
+        z-index: 10;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        
+       
+    }
+    .container2 .card-products {
+        width: 100%;
+        margin: 12px 10px;
+
+    }
+
+    .flash-sale-heading h2 {
+        font-size: 3.5rem;
+
+    }
+
+}
+
+@media (max-width: 425px) {}

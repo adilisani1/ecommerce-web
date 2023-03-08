@@ -86,15 +86,6 @@ export const Products = [
 
   {
     id: 9,
-    name: "Apple Watch",
-    image: "/images/main-section/watch-sm.png",
-    category: "watches",
-    price: 599,
-    oldPrice: 699,
-    featured: false,
-  },
-  {
-    id: 10,
     name: "Nike Shoes",
     image: "/images/main-section/shoe1.png",
     category: "shoes",
@@ -103,7 +94,7 @@ export const Products = [
     flashSale: true,
   },
   {
-    id: 11,
+    id: 10,
     name: "Nike Shoes",
     image: "/images/main-section/shoe2.png",
     category: "shoes",
@@ -112,7 +103,7 @@ export const Products = [
     flashSale: true,
   },
   {
-    id: 12,
+    id: 11,
     name: "Nike Shoes",
     image: "/images/main-section/shoe3.png",
     category: "shoes",
@@ -120,5 +111,13 @@ export const Products = [
     oldPrice: 699,
     flashSale: true,
   },
-
+  {
+    id: 12,
+    name: "4K LED TV",
+    image: "/images/main-section/led-tv2.png",
+    category: "electronic device",
+    price: 1999,
+    oldPrice: 2999,
+    deals: true,
+  },
 ];
