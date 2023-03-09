@@ -1,319 +1,118 @@
+import { useState } from 'react';
 import { Modal, ModalBody, ModalFooter } from 'reactstrap';
 import './Modal.css';
 
-export const MyModal = ({ isOpen, setIsOpen, order }) => {
+export const MyModal = ({ isOpen, setIsOpen, order, orderTotal, shippingCost, total }) => {
+
+
+    const [cardNumber, setCardNumber] = useState("");
+    const [expiryDate, setExpiryDate] = useState("");
+    const [cvv, setCvv] = useState("");
+    const [cardHolder, setCardHolder] = useState("");
+
+    // const handleCardNumberChange = (event) => {
+    //     setCardNumber(event.target.value);
+    // };
+
+    // const handleExpiryDateChange = (event) => {
+    //     setExpiryDate(event.target.value);
+    // };
+
+    // const  = (event) => {
+    //     setExpiryDate(event.target.value);
+    // };
+
+    // const handleCvvChange = (event) => {
+    //     setCvv(event.target.value);
+    // };
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
+    };
 
     return (
-        //         <Modal isOpen={isOpen} toggle={() => setIsOpen(!isOpen)} size='lg'>
-        //             <ModalBody >
-        //                 <div className='rowClass'>
-        //                     <div className='left-side border-end'>
-        //                         <h1 className='text-white'>Order Summary</h1>
-        //                         <h3 className='text-white'>Items</h3>
-        //                         {order?.cartItems?.map((item) => {
-        //                             return (
-        //                                 <div className="">
-
-        //                                     <table className="table table-borderless table-shopping-cart">
-        //                                         <thead className="text-muted">
-        //                                             <tr className="small text-uppercase">
-        //                                                 <th scope="col">Product</th>
-        //                                                 <th scope="col" width="120">Quantity</th>
-        //                                                 <th scope="col" width="120">Price</th>
-        //                                             </tr>
-        //                                         </thead>
-        //                                         <tbody>
-
-        //                                             <tr className='' key={item.id}>
-        //                                                 <td className="align-baseline">
-        //                                                     <figure className="itemside align-items-center">
-        //                                                         <div className="aside"><img src={item.image} className="img-sm" alt={item.image} />
-        //                                                         </div>
-        //                                                     </figure>
-        //                                                 </td>
-
-        //                                                 <td className="align-baseline">
-        //                                                     <button className="quantity-btn">-</button>
-        //                                                     <span className="quantity-count">{item.quantity}</span>
-        //                                                     <button className="quantity-btn">+</button>
-        //                                                 </td>
-
-        //                                                 <td className="align-baseline">
-        //                                                     <div className="price-wrap">
-        //                                                         <p className="price">{item.price.toFixed(2)}</p>
-        //                                                     </div>
-        //                                                 </td>
-
-        //                                                 <td className="text-right align-baseline">
-        //                                                     <button
-
-        //                                                         className="delete-product-btn"
-        //                                                     >
-        //                                                         x</button>
-        //                                                 </td>
-        //                                             </tr>
-
-
-        //                                         </tbody>
-        //                                     </table>
-        //                                 </div>
-        //                             )
-        //                         })}
-        //                     </div>
-        //                     <div className="right-side">
-        //                         <img className="credit-card" src='./images/credit-transparent.png' alt="" />
-        //                         <div>Add a card <span>+</span></div>
-        //                         <div>
-        //                             <button className='btn btn-primary'>Process Payment
-        //                             </button>
-        //                         </div>
-        //                     </div>
-        //                 </div>
-        //             </ModalBody>
-        //             <ModalFooter>
-        //                 <div className='subtotal-order-summary '>
-        //                     <div className='subtotal-inner '>
-        //                         <div className='subtotalt '>Subtotal:</div>
-        //                         <span className='order-t'>{`$${order.total}`}</span>
-        //                     </div>
-        //                 </div>
-        //             </ModalFooter>
-        //         </Modal>
-
-        //         <Modal isOpen={isOpen} toggle={() => setIsOpen(!isOpen)} size='lg'>
-        //             <ModalBody >
-
-
-        //                 <div className='row'>
-        //                     <div className='col-md-5 border-end'>
-        //                         <h1 className='text-white'>Order Summary</h1>
-        //                         <h3 className='text-white'>Items</h3>
-        //                         {order?.cartItems?.map((item) => {
-        //                             return (
-        //                                 <div className="">
-
-        //                                     <table className="table table-borderless table-shopping-cart">
-        //                                         <thead className="text-muted">
-        //                                             <tr className="small text-uppercase">
-        //                                                 <th scope="col">Product</th>
-        //                                                 <th scope="col" width="120">Quantity</th>
-        //                                                 <th scope="col" width="120">Price</th>
-        //                                             </tr>
-        //                                         </thead>
-        //                                         <tbody>
-
-        //                                             <tr className='' key={item.id}>
-        //                                                 <td className="align-baseline">
-        //                                                     <figure className="itemside align-items-center">
-        //                                                         <div className="aside"><img src={item.image} className="img-sm" alt={item.image} />
-        //                                                         </div>
-        //                                                     </figure>
-        //                                                 </td>
-
-        //                                                 <td className="align-baseline">
-        //                                                     <button className="quantity-btn">-</button>
-        //                                                     <span className="quantity-count">{item.quantity}</span>
-        //                                                     <button className="quantity-btn">+</button>
-        //                                                 </td>
-
-        //                                                 <td className="align-baseline">
-        //                                                     <div className="price-wrap">
-        //                                                         <p className="price">{item.price.toFixed(2)}</p>
-        //                                                     </div>
-        //                                                 </td>
-
-        //                                                 <td className="text-right align-baseline">
-        //                                                     <button
-
-        //                                                         className="delete-product-btn"
-        //                                                     >
-        //                                                         x</button>
-        //                                                 </td>
-        //                                             </tr>
-
-
-        //                                         </tbody>
-        //                                     </table>
-        //                                 </div>
-        //                             )
-        //                         })}
-        //                     </div>
-        //                     <div className="col-md-7 d-flex align-items-center justify-content-center flex-column c-card">
-        //                         <img className="credit-card" src='./images/credit-transparent.png' alt="" />
-
-        //                         <div className="add-a-card-text ">Add a card <span className="add-card-plus">+</span></div>
-        //                         {/* <div>
-        //                             <button className='process-payment-btn btn btn-primary'>Process Payment</button>
-        //                         </div> */}
-        //                     </div>
-        //                 </div>
-        //             </ModalBody>
-        //             <ModalFooter>
-        //                 <div className='subtotal-order-summary '>
-        //                     <div className='subtotal-inner '>
-        //                         <div className='subtotalt '>Subtotal:</div>
-        //                         <span className='order-t'>{`$${order.total}`}</span>
-        //                         <div>
-        //                             <button className='process-payment-btn btn btn-primary '>Process Payment</button>
-        //                         </div>
-        //                     </div>
-
-        //                 </div>
-        //             </ModalFooter>
-        //         </Modal>
-        //     );
-        // }
-
-
-        // import React from 'react';
-
-        // export const MyModal = ({ isOpen, setIsOpen, order }) => {
-        //     return (
-
-        //         <Modal isOpen={isOpen} toggle={() => setIsOpen(!isOpen)} size='lg'>
-        //             <ModalBody>
-
-        //                 <div >
-        //                     <h2 >Order Summary</h2>
-        //                     <table>
-        //                         <thead>
-        //                             <tr>
-        //                                 <th>Item</th>
-        //                                 <th>Quantity</th>
-        //                                 <th>Price</th>
-        //                             </tr>
-        //                         </thead>
-        //                         <tbody>
-        //                             {order?.cartItems?.map((item) => (
-        //                                 <tr key={item.id}>
-        //                                     <td>{item.name}</td>
-        //                                     <td>{item.quantity}</td>
-        //                                     <td>{item.price.toFixed(2)}</td>
-        //                                 </tr>
-        //                             ))}
-        //                         </tbody>
-        //                     </table>
-        //                     <div className='order-summary'>
-        //                         <div>
-        //                             <span>Subtotal: </span>
-        //                             <span>${order.subtotal.toFixed(2)}</span>
-        //                         </div>
-        //                         <div>
-        //                             <span>Tax: </span>
-        //                             <span>${order.price.toFixed(2)}</span>
-        //                         </div>
-        //                         <div>
-        //                             <span>Total: </span>
-        //                             <span>${order.total.toFixed(2)}</span>
-        //                         </div>
-        //                     </div>
-        //                 </div>
-        //             </ModalBody >
-        //         </Modal>
-
-        //     );
-        // };
-
         <Modal isOpen={isOpen} toggle={() => setIsOpen(!isOpen)} size='lg'>
             <ModalBody >
                 <div className="main-modal">
-                    <div className="order-summary-head">
-                        <h1 className='text-white text-center '>Payment Method</h1>
-                    </div>
-                    <div className="payment-gateway">
-                        <div className="card-select">
-                            <input className="form-check-input mt-0" type="radio" value="" aria-label="Radio button for following text input" />
-                            <img className="" src="/images/main-section/master-card-icon.svg" />
+                    <div className="modal-area">
+                        <div className="modal-left-side">
+                            <div className="order-summary-head">
+                                <h1 className='text-white text-left border-bottom'>Order Summary</h1>
+                                {order?.cartItems?.map((item) => {
+                                    return (
+                                        <div className="border-bottom mb-5">
+                                            <div className="order-summary-products">
+                                                <img src={item.image} alt={item.name} />
+                                                <div className="product-details">
+                                                    <p className="product-title text-white mb-0 pb-0">{item.name}</p>
+                                                    <span className="product-cat text-white">{item.category}</span>
+                                                </div>
+                                            </div>
+                                            <div className='product-price'>
+                                                <span className="text-white">${item.price.toFixed(2)}</span>
+                                            </div>
+                                        </div>
+                                    )
+                                })}
+                                <div className="subtotal-order-summary">
+                                    <div className="order-total d-flex justify-content-between ">
+                                        <p className="text-white">Order total</p><span className="order-t">${orderTotal.toFixed(2)}</span>
+                                    </div>
+                                    <div className="shipping d-flex justify-content-between">
+                                        <p className="text-white">Shipping Cost</p><span className="shipping-cost">${shippingCost.toFixed(2)}</span>
+                                    </div>
+                                    <div className="shipping d-flex justify-content-between">
+                                        <p className="text-white">Subtotal</p><span className="subtotal-t">${total.toFixed(2)}</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div className="card-select">
-                            <input className="form-check-input mt-0" type="radio" value="" aria-label="Radio button for following text input" />
-                            <img className="" src="/images/main-section/master-card-icon.svg" />
-                        </div>
-                        <div className="card-select">
-                            <input className="form-check-input mt-0" type="radio" value="" aria-label="Radio button for following text input" />
-                            <img className="" src="/images/main-section/master-card-icon.svg" />
+
+                        <div className="modal-right-side">
+                            <div><img src="/images/credit-card.png" alt="" /></div>
+                            <form>
+                                <div className="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label>Card Number*</label>
+                                            <input
+                                                type="text"
+                                                placeholder="0000 0000 0000 0000"
+                                                className="form-control"
+                                                name="number"
+                                                id="number"
+                                                value={cardNumber} onChange={(e) => setCardNumber(e.target.value)} />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label>Cardholder name*</label>
+                                            <input type="text" placeholder="Cardholder name" className="form-control" name="name" id="name" value={cardHolder} onChange={(e) => setCardHolder(e.target.value)} />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Expiry date* </label>
+                                            <input type="text" placeholder="YY/MM" className="form-control" name="time" id="time" value={expiryDate} onChange={(e) => setExpiryDate(e.target.value)} />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>CVV*</label>
+                                            <input type="text" placeholder="000" className="form-control" name="time" id="time" value={cvv} onChange={(e) => setCvv(e.target.value)} />
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="submit" className="confirm-payment-btn">Confirm Payment</button>
+                            </form>
                         </div>
                     </div>
                 </div>
-
-                {/* <div className='row'>
-                    <div className='col-md-5 border-end'>
-                        <h1 className='text-white'>Order Summary</h1>
-                        <h3 className='text-white'>Items</h3>
-                        {order?.cartItems?.map((item) => {
-                            return (
-                                <div className="">
-
-                                    <table className="table table-borderless table-shopping-cart">
-                                        <thead className="text-muted">
-                                            <tr className="small text-uppercase">
-                                                <th scope="col">Product</th>
-                                                <th scope="col" width="120">Quantity</th>
-                                                <th scope="col" width="120">Price</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-
-                                            <tr className='' key={item.id}>
-                                                <td className="align-baseline">
-                                                    <figure className="itemside align-items-center">
-                                                        <div className="aside"><img src={item.image} className="img-sm" alt={item.image} />
-                                                        </div>
-                                                    </figure>
-                                                </td>
-
-                                                <td className="align-baseline">
-                                                    <button className="quantity-btn">-</button>
-                                                    <span className="quantity-count">{item.quantity}</span>
-                                                    <button className="quantity-btn">+</button>
-                                                </td>
-
-                                                <td className="align-baseline">
-                                                    <div className="price-wrap">
-                                                        <p className="price">{item.price.toFixed(2)}</p>
-                                                    </div>
-                                                </td>
-
-                                                <td className="text-right align-baseline">
-                                                    <button
-
-                                                        className="delete-product-btn"
-                                                    >
-                                                        x</button>
-                                                </td>
-                                            </tr>
-
-
-                                        </tbody>
-                                    </table>
-                                </div>
-                            )
-                        })}
-                    </div>
-                    <div className="col-md-7 d-flex align-items-center justify-content-center flex-column c-card">
-                        <img className="credit-card" src='./images/credit-transparent.png' alt="" />
-
-                        <div className="add-a-card-text ">Add a card <span className="add-card-plus">+</span></div>
-                        <div>
-                            <button className='process-payment-btn btn btn-primary'>Process Payment</button>
-                        </div>
-                    </div>
-                </div> 
-           </ModalBody>
-            {/* <ModalFooter> */}
-                {/* <div className='subtotal-order-summary '>
-                    <div className='subtotal-inner '>
-                        <div className='subtotalt '>Subtotal:</div>
-                        <span className='order-t'>{`$${order.total}`}</span>
-                        <div>
-                            <button className='process-payment-btn btn btn-primary '>Process Payment</button>
-                        </div>
-                    </div>
-
-                </div> */}
-                {/* </ModalFooter> */}
-            </ModalBody >
-        </Modal>
+            </ModalBody>
+        </Modal >
     );
 }
 

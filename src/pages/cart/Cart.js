@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import './Cart.css';
-// import { Modal, ModalBody, ModalHeader } from 'reactstrap';
 import Form from './../../components/form/Form';
 import { MyModal } from '../../utils/Modal';
-import { Modal, ModalBody, ModalHeader } from 'reactstrap';
 import { Table } from '../../utils/Table';
 
 const Cart = (props) => {
@@ -67,7 +65,7 @@ const Cart = (props) => {
                                 <p className="txt">Order total</p><span className="price-txt">${orderTotal.toFixed(2)}</span>
                             </div>
                             <div className="shipping d-flex justify-content-between">
-                                <p className="txt">Shipping total</p><span className="price-txt">${shippingCost.toFixed(2)}</span>
+                                <p className="txt">Shipping Cost</p><span className="price-txt">${shippingCost.toFixed(2)}</span>
                             </div>
                             <div className="sub-total border-top ">
                                 <p className="sub-total-text">Subtotal</p>
@@ -88,6 +86,10 @@ const Cart = (props) => {
                                 isOpen={isOpen}
                                 setIsOpen={setIsOpen}
                                 order={order}
+                                orderTotal={orderTotal}
+                                shippingCost={shippingCost}
+                                total={totalPrice}
+
                             />
                         </div>
                     </div>
