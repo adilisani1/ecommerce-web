@@ -1,17 +1,8 @@
 import './Form.css';
-
 import React from 'react';
-
-
-export const FormField = ({ label, name, type, value, onChange, required, placeholder }) => {
-
-
-
+export const FormField = ({ label, name, type, value, onChange, required, placeholder, pattern }) => {
     return (
-
-
         <div className="form-group">
-
             <label htmlFor={name}>{label}</label>
             <input
                 className="form-control"
@@ -20,11 +11,9 @@ export const FormField = ({ label, name, type, value, onChange, required, placeh
                 type={type}
                 value={value}
                 onChange={onChange}
+                pattern={pattern}
                 required={required}
                 placeholder={placeholder} />
-
         </div>
-
-
     )
 }

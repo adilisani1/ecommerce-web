@@ -20,7 +20,6 @@ function App() {
     localStorage.setItem('cartItems', JSON.stringify(updatedCartItems))
   }
 
-
   const onAddToCart = (item) => {
     setCartItems((prevCartItems) => {
       const existingItem = prevCartItems.find(
@@ -55,3 +54,5 @@ function App() {
 
 
 export default App;
+
+

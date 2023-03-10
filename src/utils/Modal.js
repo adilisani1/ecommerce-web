@@ -1,38 +1,38 @@
 import { useState } from 'react';
-import { Modal, ModalBody, ModalFooter } from 'reactstrap';
+import { Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap';
 import './Modal.css';
 
 export const MyModal = ({ isOpen, setIsOpen, order, orderTotal, shippingCost, total }) => {
-
-
     const [cardNumber, setCardNumber] = useState("");
     const [expiryDate, setExpiryDate] = useState("");
     const [cvv, setCvv] = useState("");
     const [cardHolder, setCardHolder] = useState("");
 
-    // const handleCardNumberChange = (event) => {
-    //     setCardNumber(event.target.value);
-    // };
-
-    // const handleExpiryDateChange = (event) => {
-    //     setExpiryDate(event.target.value);
-    // };
-
-    // const  = (event) => {
-    //     setExpiryDate(event.target.value);
-    // };
-
-    // const handleCvvChange = (event) => {
-    //     setCvv(event.target.value);
-    // };
+    const [cardInfo, setCardInfo] = useState("");
 
     const handleSubmit = (event) => {
         event.preventDefault();
+        if (cardNumber || expiryDate || cvv || cardHolder !== "") {
 
+            alert('Your Order Has Been Placed');
+
+            setCardNumber("");
+            setExpiryDate("");
+            setCvv("");
+            setCardHolder("");
+        }
+
+        else return alert('Please enter your card details');
     };
 
     return (
-        <Modal isOpen={isOpen} toggle={() => setIsOpen(!isOpen)} size='lg'>
+        <Modal isOpen={isOpen} onClick={() => setIsOpen(false)} size='lg'>
+            <span
+                className="modal-close-icon"
+                toggle={() => setIsOpen(isOpen)}
+                aria-label="Close">
+                ×
+            </span>
             <ModalBody >
                 <div className="main-modal">
                     <div className="modal-area">
@@ -71,7 +71,7 @@ export const MyModal = ({ isOpen, setIsOpen, order, orderTotal, shippingCost, to
 
                         <div className="modal-right-side">
                             <div><img src="/images/credit-card.png" alt="" /></div>
-                            <form>
+                            <form onSubmit={handleSubmit}>
                                 <div className="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
@@ -110,6 +110,7 @@ export const MyModal = ({ isOpen, setIsOpen, order, orderTotal, shippingCost, to
                             </form>
                         </div>
                     </div>
+
                 </div>
             </ModalBody>
         </Modal >

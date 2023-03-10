@@ -1,4 +1,4 @@
-.form-group {
+/* .form-group {
     margin-bottom: 1rem;
 }
 
@@ -25,4 +25,97 @@ label {
 .form-control:focus {
     border-color: #80bdff;
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+} */
+
+
+
+.modal-content {
+    background: linear-gradient(135deg, rgba(133, 133, 133, 0.763), rgba(14, 13, 13, 0.963));
+    backdrop-filter: blur(10px);
+    /* border: 2px solid rgba(255, 255, 255, 0.01); */
+    box-shadow: 0 10px 32px 0 rgb(0 0 0 / 40%);
+    display: flex;
+    width: 100%;
+    pointer-events: auto;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 0.3rem;
+    outline: 0;
+    /* padding: 0rem 2rem 0rem 2rem; */
 }
+
+.modal-body {
+    position: relative;
+    flex: 1 1 auto;
+    padding: 0 !important
+}
+
+.modal-dialog {
+    width: 1350px;
+}
+
+ .form-group {
+    position: relative;
+    width: 100%;
+    padding :10px 20px 5px 20px;
+  }
+  
+  .form-group label{
+    color: white;
+    font-family: var(--Raleway);
+    font-size: 1.5rem;
+  }
+  
+  .form-group .form-control {
+    background-color: rgba(255, 238, 238, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      height: 5rem;
+      font-size: 1.4rem;
+      color: #FFFFFF;
+      margin-bottom: 2rem;
+      padding-left: 1.6rem;
+  }
+  
+  .form-group .form-control::placeholder{
+    color: #ababab;
+  }
+
+  .formHeading{
+    color: white;
+    padding: 3rem 0rem;
+    text-align: center;
+    font-family: var(--Poppins);
+    
+    border-bottom: 1px solid #909090;
+  }
+  .close-modal {
+    position: absolute;
+    top: 0.05rem;
+    right: 1.5rem;
+    color: #ccc;
+    font-size: 2.7rem;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 1000;
+    cursor: pointer;
+  }
+  .close-modal:hover{
+    color:#fc5800;
+  }
+.continue-to-payment
+    {
+        border: none;
+          background-color: #646464;
+          width: 100%;
+          box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+          padding: 1.5rem;
+          font-family: var(--Raleway);
+          color: white;
+          font-size: 1.8rem;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          font-weight: 600;
+  }
+  .continue-to-payment:hover{
+    background-color: #fc5800;
+  }

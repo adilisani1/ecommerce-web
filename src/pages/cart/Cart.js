@@ -3,16 +3,22 @@ import './Cart.css';
 import Form from './../../components/form/Form';
 import { MyModal } from '../../utils/Modal';
 import { Table } from '../../utils/Table';
+import { Modal, ModalBody } from 'reactstrap';
 
 const Cart = (props) => {
-    const [isCheckout, setIsCheckout] = useState(false);
+    //const [isCheckout, setIsCheckout] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
     const [order, setOrder] = useState([]);
     const [userData, setUserData] = useState({
         name: "",
         email: "",
         address: "",
+
     });
+
+    const toggle = () => setIsModalOpen(!isModalOpen)
+
 
     const handleChange = (event) => {
         const { name, value } = event.target;
@@ -73,7 +79,7 @@ const Cart = (props) => {
                             </div>
                         </div>
                         <div className="checkout">
-                            <button className="checkout-btn" onClick={() => setIsCheckout(true)}>Proceed</button>
+                            <button className="checkout-btn" onClick={toggle}>Proceed</button>
                         </div>
                     </div>
 
@@ -98,12 +104,23 @@ const Cart = (props) => {
                 {props.cartItems.length === 0 ? (
                     <div className="alert text-white d-flex align-items-center">Please add items to your cart</div>
                 ) : (
-                    isCheckout && (
+                    isModalOpen && (
                         <div className="cart form-container">
-                            <Form
-                                createOrder={createOrder}
-                                userData={userData}
-                                handleChange={handleChange} />
+                            <Modal isOpen={isModalOpen} toggle={toggle} size='lg'>
+                                <span
+                                    className="modal-close-icon"
+                                    onClick={() => setIsModalOpen(false)}
+                                    aria-label="Close">
+                                    ×
+                                </span>
+                                <ModalBody>
+                                    <Form
+                                        createOrder={createOrder}
+                                        userData={userData}
+                                        handleChange={handleChange}
+                                    />
+                                </ModalBody>
+                            </Modal>
                         </div>
                     )
                 )}
