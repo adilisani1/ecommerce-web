@@ -2,12 +2,13 @@
 .footer-wrapper {
     position: relative;
     background: linear-gradient(358deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-    /* background-color: #27282b; */
     backdrop-filter: blur(10px);
     border: 2px solid rgba(255, 255, 255, 0.01);
     box-shadow: 0 10px 32px 0 rgba(0, 0, 0, 0.4);
     padding: 5rem 0rem;
 }
+
+
 
 .footer-container {
     margin-bottom: 3rem;

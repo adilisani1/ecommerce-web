@@ -1,35 +1,33 @@
 import { useState } from 'react';
-import { Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap';
+import { Modal, ModalBody } from 'reactstrap';
 import './Modal.css';
 
-export const MyModal = ({ isOpen, setIsOpen, order, orderTotal, shippingCost, total }) => {
+export const MyModal = ({ isOpen, setIsOpen, order, orderTotal, shippingCost, total, setIsCheckout }) => {
     const [cardNumber, setCardNumber] = useState("");
     const [expiryDate, setExpiryDate] = useState("");
     const [cvv, setCvv] = useState("");
     const [cardHolder, setCardHolder] = useState("");
 
-    const [cardInfo, setCardInfo] = useState("");
-
     const handleSubmit = (event) => {
         event.preventDefault();
         if (cardNumber || expiryDate || cvv || cardHolder !== "") {
-
             alert('Your Order Has Been Placed');
-
             setCardNumber("");
             setExpiryDate("");
             setCvv("");
             setCardHolder("");
-        }
 
+            setIsOpen(false);
+            setIsCheckout(false);
+        }
         else return alert('Please enter your card details');
     };
 
     return (
-        <Modal isOpen={isOpen} onClick={() => setIsOpen(false)} size='lg'>
+        <Modal isOpen={isOpen} toggle={() => setIsOpen(!isOpen)} size='lg'>
             <span
                 className="modal-close-icon"
-                toggle={() => setIsOpen(isOpen)}
+                onClick={() => setIsOpen(false)}
                 aria-label="Close">
                 ×
             </span>

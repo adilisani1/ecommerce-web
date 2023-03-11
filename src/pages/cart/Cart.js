@@ -6,8 +6,7 @@ import { Table } from '../../utils/Table';
 import { Modal, ModalBody } from 'reactstrap';
 
 const Cart = (props) => {
-    //const [isCheckout, setIsCheckout] = useState(false);
-    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isCheckout, setIsCheckout] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
     const [order, setOrder] = useState([]);
     const [userData, setUserData] = useState({
@@ -17,8 +16,7 @@ const Cart = (props) => {
 
     });
 
-    const toggle = () => setIsModalOpen(!isModalOpen)
-
+    const toggle = () => setIsCheckout(!isCheckout);
 
     const handleChange = (event) => {
         const { name, value } = event.target;
@@ -37,8 +35,8 @@ const Cart = (props) => {
     } else {
         shippingCost = 10
     }
-    const totalPrice = orderTotal + shippingCost;
 
+    const totalPrice = orderTotal + shippingCost;
     const createOrder = (event) => {
         event.preventDefault();
         const order = {
@@ -61,7 +59,6 @@ const Cart = (props) => {
                             cartItems={props.cartItems}
                             onRemove={props.onRemove} />
                     </div>
-
                     <div className="cart-payment-box">
                         <div className="summary-title border-bottom ">
                             {props.cartItems.length === 0 ? <h3>Your Cart Is Empty </h3> : <h3>Cart Summary</h3>}
@@ -79,7 +76,10 @@ const Cart = (props) => {
                             </div>
                         </div>
                         <div className="checkout">
-                            <button className="checkout-btn" onClick={toggle}>Proceed</button>
+                            <button className="checkout-btn"
+                                onClick={toggle}>
+                                Proceed
+                            </button>
                         </div>
                     </div>
 
@@ -95,6 +95,7 @@ const Cart = (props) => {
                                 orderTotal={orderTotal}
                                 shippingCost={shippingCost}
                                 total={totalPrice}
+                                setIsCheckout={setIsCheckout}
 
                             />
                         </div>
@@ -104,12 +105,12 @@ const Cart = (props) => {
                 {props.cartItems.length === 0 ? (
                     <div className="alert text-white d-flex align-items-center">Please add items to your cart</div>
                 ) : (
-                    isModalOpen && (
+                    isCheckout && (
                         <div className="cart form-container">
-                            <Modal isOpen={isModalOpen} toggle={toggle} size='lg'>
+                            <Modal isOpen={isCheckout} toggle={toggle} size='lg'>
                                 <span
                                     className="modal-close-icon"
-                                    onClick={() => setIsModalOpen(false)}
+                                    onClick={() => setIsCheckout(false)}
                                     aria-label="Close">
                                     ×
                                 </span>

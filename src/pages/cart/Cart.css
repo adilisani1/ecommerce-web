@@ -2,6 +2,7 @@
 /* -------------------------Cart Page CSS-------------------------------*/
 /* -------------------------Cart Page CSS------------------------------*/
 
+
 .cart-data {
   display: flex;
   width: calc(100% - 90px);
@@ -9,18 +10,12 @@
   left: 90px;
   margin-top: 15%;
   margin-bottom: 12%;
+      height: 62vh;
 }
 
 .cart-data .cart-items-box {
-  /* padding: 20px; */
   width: 60%;
-  /* border-bottom: .1rem solid #c0c0c02d;
-    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
-    background: linear-gradient(#353840, #131314);  */
   display: flex;
-
-  /*   align-items: center;
-    overflow: hidden;*/
   margin-right: 4rem;
 }
 
