@@ -100,10 +100,10 @@ const Navbar = (props) => {
                                 <Link className="" to="/shop">Shop</Link>
                             </li>
                             <li className="" onClick={toggleNavbar}>
-                                <Link className="" to="/deals">Deals</Link>
+                                <Link className="" to="/">Deals</Link>
                             </li>
                             <li className="" onClick={toggleNavbar}>
-                                <Link className="" to="/contactus">Contact Us</Link>
+                                <Link className="" to="/">Contact Us</Link>
                             </li>
 
                             <li className="position-relative">

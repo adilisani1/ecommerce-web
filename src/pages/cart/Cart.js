@@ -13,7 +13,6 @@ const Cart = (props) => {
         name: "",
         email: "",
         address: "",
-
     });
 
     const toggle = () => setIsCheckout(!isCheckout);
@@ -26,7 +25,7 @@ const Cart = (props) => {
         }));
     };
 
-    const orderTotal = props.cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+    const orderTotal = props?.cartItems?.reduce((total, item) => total + item.price * item.quantity, 0);
     let shippingCost;
     if (orderTotal > 1000) {
         shippingCost = 0
@@ -59,6 +58,7 @@ const Cart = (props) => {
                             cartItems={props.cartItems}
                             onRemove={props.onRemove} />
                     </div>
+
                     <div className="cart-payment-box">
                         <div className="summary-title border-bottom ">
                             {props.cartItems.length === 0 ? <h3>Your Cart Is Empty </h3> : <h3>Cart Summary</h3>}
@@ -83,6 +83,7 @@ const Cart = (props) => {
                         </div>
                     </div>
 
+
                 </div>
 
                 {order && (
@@ -96,15 +97,13 @@ const Cart = (props) => {
                                 shippingCost={shippingCost}
                                 total={totalPrice}
                                 setIsCheckout={setIsCheckout}
-
+                                setCartItems={props.setCartItems}
                             />
                         </div>
                     </div>
                 )}
 
-                {props.cartItems.length === 0 ? (
-                    <div className="alert text-white d-flex align-items-center">Please add items to your cart</div>
-                ) : (
+                {props.cartItems.length !== 0 && (
                     isCheckout && (
                         <div className="cart form-container">
                             <Modal isOpen={isCheckout} toggle={toggle} size='lg'>

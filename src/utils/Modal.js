@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Modal, ModalBody } from 'reactstrap';
 import './Modal.css';
 
-export const MyModal = ({ isOpen, setIsOpen, order, orderTotal, shippingCost, total, setIsCheckout }) => {
+export const MyModal = ({ isOpen, setIsOpen, order, orderTotal, shippingCost, total, setIsCheckout, setCartItems }) => {
     const [cardNumber, setCardNumber] = useState("");
     const [expiryDate, setExpiryDate] = useState("");
     const [cvv, setCvv] = useState("");
@@ -19,7 +19,9 @@ export const MyModal = ({ isOpen, setIsOpen, order, orderTotal, shippingCost, to
 
             setIsOpen(false);
             setIsCheckout(false);
+            setCartItems([])
         }
+
         else return alert('Please enter your card details');
     };
 

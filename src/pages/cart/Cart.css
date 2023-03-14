@@ -2,21 +2,28 @@
 /* -------------------------Cart Page CSS-------------------------------*/
 /* -------------------------Cart Page CSS------------------------------*/
 
-
 .cart-data {
   display: flex;
   width: calc(100% - 90px);
   position: relative;
   left: 90px;
   margin-top: 15%;
+  height: 100vh;
   margin-bottom: 12%;
-      height: 62vh;
 }
+
+
 
 .cart-data .cart-items-box {
   width: 60%;
   display: flex;
   margin-right: 4rem;
+}
+
+.empty-cart {
+  width: 40%;
+  opacity: .1;
+  margin-top: 3rem;
 }
 
 .cart-product-content {
@@ -38,7 +45,7 @@
 }
 
 .product-cat {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-family: var(--Oswald);
   text-transform: uppercase;
 }
@@ -299,6 +306,17 @@ a {
   font-weight: 600;
 }
 
+/* .cart-empty {
+  position: absolute;
+  top: 28rem;
+  left: 16rem;
+
+} */
+/* .cart-empty img {
+ width: 15%;
+ opacity: .1;
+
+} */
 /* -------------------------Cart Page CSS---------------------------------*/
 /* -------------------------Cart Page CSS-------------------------------*/
 /* -------------------------Cart Page CSS------------------------------*/
@@ -315,6 +333,16 @@ a {
     width: 100%;
     text-align: center;
   }
+
+    .empty-cart {
+      width: 40%;
+      opacity: .1;
+      margin: 0 auto;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      padding: .7rem 0;
+    }
 }
 @media (max-width: 768px){
     
@@ -336,6 +364,27 @@ a {
     justify-content: center;
     display: flex;
   }
+    .summary-title h3 {
+      font-size: 2rem;
+    }
+        .payment-data .txt {
+          font-size: 1.4rem;
+         
+        }
+
+        .cart-payment-box .checkout-btn {
+          font-size: 1.5rem;
+        }
+
+     .payment-data .sub-total-text {
+       font-size: 1.7rem;
+               
+   }
+     .payment-data .total-price {
+       font-size: 1.8rem;
+      
+     }
+    
 }
 @media (max-width: 425px) {
   .itemside .info {

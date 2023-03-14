@@ -2,10 +2,8 @@ import React from 'react'
 import './Shop.css';
 
 const Shop = (props) => {
-
     return (
         <>
-            {/* <!--Shopping Banner--> */}
             <section className="shopping-banner-wrapper">
                 <div className="shopping-banner ">
                     <div className="shopping-container">
@@ -61,14 +59,12 @@ const Shop = (props) => {
                                     </div>
                                     <div className="button">
                                         <div className="button-layer"></div>
-
                                         <button onClick={() => props.onHandleClick(product)}>Add To Cart</button>
                                     </div>
 
                                 </div>
                             )
                         }
-
 
                     })}
 
