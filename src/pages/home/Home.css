@@ -385,14 +385,6 @@ margin: 5rem 0;
     font-weight: 100;
     font-style: italic;
 }
-/* 
-.big-card-text .big-card-add-cart {
-    text-decoration: none;
-    background-color: var(--cards);
-    padding: 1rem 2rem 1rem 2rem;
-    color: var(--white)
-} */
-
 
 .big-card-btn-wrapper {
     display: inline-flex;
@@ -404,9 +396,7 @@ margin: 5rem 0;
 
 .big-card-btn {
     border: none;
-    /* margin-top: 0.2rem; */
     color: var(--white);
-    /* padding: 2.5rem 6rem; */
     width: 200px;
     height: 60px;
     background-color: #41464b;
@@ -418,7 +408,6 @@ margin: 5rem 0;
 .big-card-btn span {
     font-size: 1.5rem;
     margin-left: 4rem;
-    /* font-family: var(--Raleway); */
     font-family: var(--Oswald);
     text-transform: uppercase;
     font-weight: 400;
@@ -427,9 +416,7 @@ margin: 5rem 0;
 }
 .big-card-btn:hover {
     background-image: linear-gradient(135deg, #41f7fd, #334eff);
-    /* background: #41f7fd; */
 }
-
 
 
 /*RESPONSIVE Main Section*/ 
@@ -558,57 +545,7 @@ margin: 5rem 0;
 }
 
 @media (max-width: 667px) {
-        /* MAIN SECTION */
-            /*------------------------------------*/
-            /* .container1 .card .img8x h2 {
-                font-size: 2.5rem;
                 
-            }
-                         
-                         .big-card {
-                             height: auto;
-                             padding: 1rem 2.5rem;
-                             margin: 1rem 0.5rem;
-            
-                         }
-            
-                         .led-tv-img {
-                             margin-bottom: 3rem;
-                             padding-right: 0;
-                         }
-            
-                         .led-tv-img img {
-                             margin-top: -4rem;
-                             
-                         }
-            
-            
-                         .big-card-text .big-card-title {
-                             font-size: 3rem;
-            
-                         }
-            
-                         .big-card .big-card-text {
-                             text-align: center;
-                             padding: 0;
-                         }
-            
-            
-                         .big-card-text .long-text {
-                             width: 100%;
-                             font-size: 1.5rem;
-            
-                         }
-
-          
-                                .main-section {
-                                    z-index: 5;
-                                    display: b;
-                                    padding: 5px 10px;
-                                   
-                                } */
-                
-                            
 }
 
 @media (max-width: 425px) {

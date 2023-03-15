@@ -10,7 +10,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    background-image: url(https://images.pexels.com/photos/1778412/pexels-photo-1778412.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-image: url("/public/images/hero-section/women.jpg");
     width: 100%;
     text-align: center;
     align-items: center;
@@ -109,7 +109,6 @@ height: 100vh;
     align-items: center;
     flex-direction: column;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-    /* background-color: #27282b; */
     backdrop-filter: blur(10px);
     border-radius: 20px;
     border: 2px solid rgba(255, 255, 255, 0.01);
@@ -148,7 +147,6 @@ height: 100vh;
 
 .card-products .products-img img {
     max-width: 100%;
-    /* margin: 0 0 20px; */
     transition: 0.5s ease-in-out;
     object-fit: contain;
     height: 25rem;
@@ -243,8 +241,6 @@ height: 100vh;
     border-radius: 25px;
     margin: 0 3rem 3.5rem 3rem;
     overflow: hidden;
-    /* padding: 2rem 1re; */
-    /* margin:0 3 2rem 0 ;  */
 
 }
 
@@ -253,17 +249,8 @@ height: 100vh;
     height: 100%;
     width: 300%;
     left: -100%;
-    /* background-image: linear-gradient(135deg, #9708CC, #43CBFF, #9708CC, #43CBFF); */
-    /* background-image: linear-gradient(to right, #DA22FF 0%, #9733EE 51%, #DA22FF 100%); */
-    /* background-image: linear-gradient(135deg, #334eff, #43CBFF, #9708CC); */
-    /* background-image: linear-gradient(to right, #1FA2FF 0%, #12D8FA 51%, #1FA2FF 100%); */
     transition: all 0.4s ease;
     background-image: linear-gradient(135deg, #41f7fd, #334eff);
-
-    /* background-image: linear-gradient(to right, #4776E6 0%, #8E54E9 51%, #4776E6 100%); */
-
-    /* background-image: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82); */
-
 
 }
 

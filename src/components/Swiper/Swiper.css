@@ -440,23 +440,6 @@ t-bag .bottom-products-content .bottom-card-rating {
         }
 
 
-        /* .bottom-slider {
-            position: relative;
-            bottom: auto;
-            padding: srem 0;
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-            backdrop-filter: blur(10px);
-            box-shadow: 0 10px 32px 0 rgb(0 0 0 / 40%);
-        } */
-/* 
-           .cart-button-items {
-               display: flex;
-               align-items: center;
-               justify-content: center;
-               margin: 0 auto;
-               padding: 0;
-    
-           } */
 
                    .cart-button-items div {
                        margin-right: 0;
@@ -465,14 +448,11 @@ t-bag .bottom-products-content .bottom-card-rating {
                    .hero-button{
                     width: 160px;
                     height:50px;
-                    /* margin-left:3rem ; */
                    }
                    .button-class{
                     margin-left: 3rem;
                    }
-                   /* .cart-bag{
-                    left: 30%;
-                   } */
+               
            
 }
 

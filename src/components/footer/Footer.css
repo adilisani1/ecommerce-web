@@ -2,14 +2,10 @@
 .footer-wrapper {
     position: relative;
 background: linear-gradient(358deg, rgb(64 59 59), rgb(0 0 0 / 92%));
-    /* backdrop-filter: blur(10px); */
     border: 2px solid rgba(255, 255, 255, 0.01);
-    /* box-shadow: 0 10px 32px 0 rgba(0, 0, 0, 0.4); */
     padding: 5rem 0rem;
     z-index: 500;
 }
-
-
 
 .footer-container {
     margin-bottom: 3rem;
@@ -30,9 +26,6 @@ background: linear-gradient(358deg, rgb(64 59 59), rgb(0 0 0 / 92%));
     font-size: 1.3rem;
     font-family: var(--Poppins);
 }
-
-
-
 
 .footer-container .send-form {
     display: inline-flex;

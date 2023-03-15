@@ -2,12 +2,13 @@
 /* -------------------------Cart Page CSS-------------------------------*/
 /* -------------------------Cart Page CSS------------------------------*/
 
+
 .cart-data {
   display: flex;
   width: calc(100% - 90px);
   position: relative;
   left: 90px;
-  margin-top: 15%;
+  margin-top: 12%;
   margin-bottom: 12%;
 }
 
@@ -18,7 +19,7 @@
 }
 
 .empty-cart {
-  width: 40%;
+  width: 35%;
   opacity: .1;
   margin-top: 3rem;
 }
@@ -303,17 +304,7 @@ a {
   font-weight: 600;
 }
 
-/* .cart-empty {
-  position: absolute;
-  top: 28rem;
-  left: 16rem;
 
-} */
-/* .cart-empty img {
- width: 15%;
- opacity: .1;
-
-} */
 /* -------------------------Cart Page CSS---------------------------------*/
 /* -------------------------Cart Page CSS-------------------------------*/
 /* -------------------------Cart Page CSS------------------------------*/
@@ -395,7 +386,6 @@ a {
 
   .cart-product-name {
     font-size: 1.2rem;
-    /* display: none; */
   }
 
 .product-cat {
@@ -404,10 +394,6 @@ a {
    
 }
 
-/* .table>:not(caption)>*>* {
-     padding:  0rem !important; 
-   padding: 0 !important;
-} */
 .cart-data {
     display: block;
    

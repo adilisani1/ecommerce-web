@@ -10,19 +10,31 @@ export const MyModal = ({ isOpen, setIsOpen, order, orderTotal, shippingCost, to
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        if (cardNumber || expiryDate || cvv || cardHolder !== "") {
-            alert('Your Order Has Been Placed');
-            setCardNumber("");
-            setExpiryDate("");
-            setCvv("");
-            setCardHolder("");
-
-            setIsOpen(false);
-            setIsCheckout(false);
-            setCartItems([])
+        if (!cardNumber || !expiryDate || !cvv || !cardHolder) {
+            return alert('Please enter all your card details');
         }
 
-        else return alert('Please enter your card details');
+        if (!/^[0-9]{16}$/.test(cardNumber)) {
+            return alert('Please enter a valid 16-digit card number');
+        }
+
+        if (!/^[0-9]{2}\/[0-9]{2}$/.test(expiryDate)) {
+            return alert('Please enter a valid expiry date (format: YY/MM)');
+        }
+
+        if (!/^[0-9]{3}$/.test(cvv)) {
+            return alert('Please enter a valid 3-digit CVV code');
+        }
+
+        alert('Your Order Has Been Placed');
+        setCardNumber("");
+        setExpiryDate("");
+        setCvv("");
+        setCardHolder("");
+
+        setIsOpen(false);
+        setIsCheckout(false);
+        setCartItems([]);
     };
 
     return (
@@ -82,13 +94,13 @@ export const MyModal = ({ isOpen, setIsOpen, order, orderTotal, shippingCost, to
                                                 className="form-control"
                                                 name="number"
                                                 id="number"
-                                                value={cardNumber} onChange={(e) => setCardNumber(e.target.value)} />
+                                                value={cardNumber} onChange={(e) => setCardNumber(e.target.value)} required />
                                         </div>
                                     </div>
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label>Cardholder name*</label>
-                                            <input type="text" placeholder="Cardholder name" className="form-control" name="name" id="name" value={cardHolder} onChange={(e) => setCardHolder(e.target.value)} />
+                                            <input type="text" placeholder="Cardholder name" className="form-control" name="name" id="name" value={cardHolder} onChange={(e) => setCardHolder(e.target.value)} required />
                                         </div>
                                     </div>
                                 </div>
@@ -96,13 +108,14 @@ export const MyModal = ({ isOpen, setIsOpen, order, orderTotal, shippingCost, to
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Expiry date* </label>
-                                            <input type="text" placeholder="YY/MM" className="form-control" name="time" id="time" value={expiryDate} onChange={(e) => setExpiryDate(e.target.value)} />
+                                            <input type="text" placeholder="YY/MM" className="form-control" name="time" id="time" value={expiryDate} onChange={(e) => setExpiryDate(e.target.value)} required />
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>CVV*</label>
-                                            <input type="text" placeholder="000" className="form-control" name="time" id="time" value={cvv} onChange={(e) => setCvv(e.target.value)} />
+                                            <input type="text" placeholder="000" className="form-control" name="time" id="time" value={cvv} onChange={(e) => setCvv(e.target.value)} required />
+
                                         </div>
                                     </div>
                                 </div>

@@ -1,10 +1,8 @@
-/* .modal{
-  overflow: hidden;
-} */
+
 .modal-content{
     background: linear-gradient(135deg, rgba(133, 133, 133, 0.763), rgba(14, 13, 13, 0.963));
       backdrop-filter: blur(10px);
-      /* border: 2px solid rgba(255, 255, 255, 0.01); */
+  
       box-shadow: 0 10px 32px 0 rgb(0 0 0 / 40%);
     display: flex;
     width: 100%;
@@ -13,7 +11,6 @@
     border: 1px solid rgba(0, 0, 0, .2);
     border-radius: 0.3rem;
     outline: 0;
-    /* padding: 0rem 2rem 0rem 2rem; */
 }
 
 
@@ -41,7 +38,7 @@
 
 .modal-left-side .order-summary-head {
   padding: 1rem 2rem 1rem 2rem;
-  margin-top: 1.5rem;
+
 }
 
 .order-summary-head h1{
@@ -198,7 +195,6 @@ font-size: 12px;
        
 }
 .confirm-payment-btn:hover{
-
 background-color: #fc5800;
 }
 
@@ -247,7 +243,6 @@ background-color: #fc5800;
 @media (max-width: 991px) {
   
   .modal-area {
-    /* width: 850px; */
     display: block;
     flex-wrap: wrap;
   }
