@@ -10,8 +10,8 @@
 }
 
 .home-swiper .swiper-container {
-    padding: 8rem 6rem 8rem 6rem;
-    margin-top: -8rem;
+    padding: 2rem 4rem 8rem 10rem;
+   
 }
 
 .home-swiper .swiper-slide {
@@ -103,6 +103,7 @@
 .cart-button-items {
     display: flex;
     align-items: center;
+   
 
 }
 
@@ -234,7 +235,6 @@
     -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center;
-
     position: relative;
 
 }
@@ -308,20 +308,56 @@ t-bag .bottom-products-content .bottom-card-rating {
 }
 
 /*RESPONSIVE Swiper Section*/
-@media(max-width: 991px) {
+@media (max-width: 1024px) {
     .hero-title {
         font-size: 4.5rem;
     }
-
     .hero-title-2 {
         font-size: 6rem;
     }
+    
+    .hero-text {
+        font-size: 1.5rem;
+        width: 100%;
+    }
+    .cart-bag {
+        font-size: 1.4rem;
+        padding: .8rem;
 
+    }
+
+}
+
+
+@media(max-width: 991px) {
+
+.home-swiper {
+        height: 100%;
+    }
+
+        .bottom-slider {
+            position: relative;
+            bottom: auto;
+            padding: srem 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 32px 0 rgb(0 0 0 / 40%);
+        }
+
+                .home-swiper .swiper-container {
+                    padding: 15rem 0 8rem 0;
+                }
+
+    .hero-title {
+        font-size: 4.5rem;
+    }
+    .hero-title-2 {
+        font-size: 6rem;
+    }
     .hero-text-section {
         text-align: center;
         width: 100%;
     }
-
     .hero-text {
         font-size: 1.5rem;
         width: 100%;
@@ -333,7 +369,7 @@ t-bag .bottom-products-content .bottom-card-rating {
     }
 
     .cart-button-items .cut-off-price {
-        font-size: 2.6rem;
+        font-size: 2.4rem;
 
     }
 
@@ -376,13 +412,20 @@ t-bag .bottom-products-content .bottom-card-rating {
         width: 35%;
     }
 
-
-
     .cart-button-items {
         justify-content: center;
 
     }
+    
+
+        .big-card-text .long-text {
+           
+            font-size: 1.6rem;
+            
+           
+        }
 }
+
 
 @media (max-width: 767px) {
     .home-swiper .swiper-container {
@@ -397,14 +440,14 @@ t-bag .bottom-products-content .bottom-card-rating {
         }
 
 
-        .bottom-slider {
+        /* .bottom-slider {
             position: relative;
             bottom: auto;
             padding: srem 0;
             background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
             backdrop-filter: blur(10px);
             box-shadow: 0 10px 32px 0 rgb(0 0 0 / 40%);
-        }
+        } */
 /* 
            .cart-button-items {
                display: flex;
@@ -414,6 +457,23 @@ t-bag .bottom-products-content .bottom-card-rating {
                padding: 0;
     
            } */
+
+                   .cart-button-items div {
+                       margin-right: 0;
+                       justify-content: center;
+                   }
+                   .hero-button{
+                    width: 160px;
+                    height:50px;
+                    /* margin-left:3rem ; */
+                   }
+                   .button-class{
+                    margin-left: 3rem;
+                   }
+                   /* .cart-bag{
+                    left: 30%;
+                   } */
+           
 }
 
 @media (max-width: 667px) {
@@ -434,7 +494,7 @@ t-bag .bottom-products-content .bottom-card-rating {
         }
 
     .hero-title {
-        font-size: 6rem;
+        font-size: 5.2rem;
     }
 
     .hero-title-2 {
@@ -442,7 +502,7 @@ t-bag .bottom-products-content .bottom-card-rating {
     }
 
     .hero-text {
-        font-size: 1.7rem;
+        /* font-size: 1.7rem; */
         margin: 1.5rem auto;
     }
 
@@ -453,6 +513,7 @@ t-bag .bottom-products-content .bottom-card-rating {
        .hero-button span{
         font-size: 1.2rem;
        }
+
    .cart-button-items {
        display: flex;
        align-items: center;
@@ -461,6 +522,8 @@ t-bag .bottom-products-content .bottom-card-rating {
        padding: 0;
 
    }
+ 
+
               
 }
 @media (max-width: 425px) {

@@ -116,6 +116,7 @@ export const Products = [
     name: "4K LED TV",
     image: "/images/main-section/led-tv2.png",
     category: "electronic device",
+    description: "This is a wider card with supporting text below as a natural lead-in to additional content.This content is a little bit longer",
     price: 1999,
     oldPrice: 2999,
     deals: true,

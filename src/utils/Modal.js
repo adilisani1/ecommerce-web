@@ -38,10 +38,10 @@ export const MyModal = ({ isOpen, setIsOpen, order, orderTotal, shippingCost, to
                     <div className="modal-area">
                         <div className="modal-left-side">
                             <div className="order-summary-head">
-                                <h1 className='text-white text-left border-bottom'>Order Summary</h1>
+                                <h1 className='text-white text-left '>Order Summary</h1>
                                 {order?.cartItems?.map((item) => {
                                     return (
-                                        <div className="border-bottom mb-5">
+                                        <div className="border-b mb-5">
                                             <div className="order-summary-products">
                                                 <img src={item.image} alt={item.name} />
                                                 <div className="product-details">

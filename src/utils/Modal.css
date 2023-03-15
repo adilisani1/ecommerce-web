@@ -48,8 +48,13 @@
     font-size: 2.4rem;
     font-family: var(--Poppins);
     font-weight: 400;
-    letter-spacing: 3px;
     margin-bottom: 3rem;
+    padding: 1rem 0rem;
+    border-bottom: 1px solid #ffffff;
+}
+
+.border-b {
+border-bottom: 1px solid #909090;
 }
 
 .order-summary-head .order-summary-products {
@@ -75,7 +80,8 @@
 }
 .product-price  span{
   text-align: right;
-
+font-family: var(--Poppins);
+font-size: 12px;
 }
 
 .modal-right-side {
@@ -188,6 +194,8 @@
         letter-spacing: 2px;
         text-transform: uppercase;
         font-weight: 600;
+       
+       
 }
 .confirm-payment-btn:hover{
 

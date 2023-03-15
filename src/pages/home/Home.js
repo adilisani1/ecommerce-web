@@ -67,36 +67,37 @@ const Home = (props) => {
 
             <div className="big-card-bg">
                 <div className="container">
-
                     <div className="big-card wa">
-                        <div className="row mb-3 align-items-center  ">
+                        {props.products.map((item) => {
+                            if (item.deals) {
+                                return (
+                                    <div className="row mb-3 align-items-center  ">
+                                        <div className="col-md-4 led-tv-img">
+                                            <img src={item.image} className="" alt="..." />
+                                        </div>
 
-                            <div className="col-md-4 led-tv-img">
-                                <img src="./images/main-section/led-tv2.png" className="" alt="..." />
-                            </div>
-
-                            <div className="col-md-8 big-card-text">
-                                <div className="card-body">
-                                    <p className="entertainment-text ">Entertainment</p>
-                                    <h5 className="big-card-title ">4k LED TV</h5>
-                                    <p className="long-text text-white">This is a wider card with supporting text below as a
-                                        natural
-                                        lead-in to additional content. This content is a little bit longer.</p>
-                                    <p className="update-time-text mb-5 text-white"><small className="">Last updated 3 mins
-                                        ago</small>
-                                    </p>
-                                    <div className="big-card-button-area">
-                                        <div className="button-class">
-                                            <ion-icon name="bag-outline" class="cart-bag"></ion-icon>
-                                            <button className="hero-button" >
-                                                {/* <!-- <ion-icon name="bag-outline" className="cart-bag"></ion-icon>--> */}
-                                                <span> Add to Cart</span>
-                                            </button>
+                                        <div className="col-md-8 big-card-text">
+                                            <div className="card-body">
+                                                <p className="entertainment-text ">Entertainment</p>
+                                                <h5 className="big-card-title ">{item.name}</h5>
+                                                <p className="long-text text-white">{item.description}</p>
+                                                <p className="update-time-text mb-5 text-white"><small className="">Last updated 3 mins
+                                                    ago</small>
+                                                </p>
+                                                <div className="big-card-button-area">
+                                                    <div className="big-card-btn-wrapper">
+                                                        <ion-icon name="bag-outline" class="cart-bag"></ion-icon>
+                                                        <button className="big-card-btn" onClick={() => props.onHandleClick(item)}>
+                                                            <span> Add to Cart</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
+                                )
+                            }
+                        })}
                     </div>
                 </div>
 

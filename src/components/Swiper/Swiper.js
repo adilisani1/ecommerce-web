@@ -48,7 +48,7 @@ function MySwiperComponent(props) {
                     spaceBetween: 10,
                 },
                 768: {
-                    slidesPerView: 2,
+                    slidesPerView: 1,
                     spaceBetween: 30,
                 },
                 667: {
@@ -93,7 +93,6 @@ function MySwiperComponent(props) {
                                                     </div>
                                                     <div className="button-class">
                                                         <ion-icon name="bag-outline" class="cart-bag"></ion-icon>
-
                                                         <button className="hero-button" onClick={() => props.featuredProduct(item)}>
                                                             <span> Add to
                                                                 Cart</span>
