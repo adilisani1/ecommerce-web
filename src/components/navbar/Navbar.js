@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 
 const Navbar = (props) => {
     const [showNav, setShowNav] = useState(false);
-
     const [isActiveHeader, setIsActiveHeader] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -19,7 +18,6 @@ const Navbar = (props) => {
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
-
 
 
     const toggleMenu = () => {
@@ -109,7 +107,7 @@ const Navbar = (props) => {
                             <li className="position-relative">
                                 <Link className="" to="/cart" onClick={toggleNavbar}>
                                     <ion-icon name="bag-outline"></ion-icon>
-                                    <span className="cart-count-badge"> {props.cartItems.length} </span>
+                                    <span className="cart-count-badge">{props.cartItems.length}</span>
                                 </Link>
                             </li>
 
