@@ -49,9 +49,6 @@ function App() {
 
     });
   };
-
-
-
   useEffect(() => {
     localStorage.setItem('cartData', JSON.stringify(cartItems))
   }, [cartItems])

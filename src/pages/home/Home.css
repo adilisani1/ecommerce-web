@@ -5,12 +5,9 @@
 /* Hero Slider */
 .hero-section {
     width: 100%;
-
     background: radial-gradient(#39424d, #14171d);
     position: relative; 
-
 }
-
 
 /*Main Section*/
 .main-section h2 {
@@ -489,7 +486,7 @@ margin: 5rem 0;
                         .big-card-btn span {
                             font-size: 1.3rem;
                         }
-                        
+                                                
 }
 
 @media (max-width: 767px) {
@@ -541,6 +538,9 @@ margin: 5rem 0;
                                     padding: 5px 10px;
                                    
                                 }
+
+                                                              
+                                                           
                 
 }
 

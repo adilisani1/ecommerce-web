@@ -86,9 +86,9 @@ const Navbar = (props) => {
 
                     <nav className="navigation-container " >
                         <ul className="nav-menu" >
-                            <li className="mobile-search">
+                            <li class="mobile-search">
                                 <input type="text" className="form-control" placeholder="Search Product......." />
-                                <ion-icon className="search-mobile-icon text-white" name="search-outline">
+                                <ion-icon class="search-mobile-icon text-white" name="search-outline">
                                 </ion-icon>
                             </li>
                             <li className="" onClick={toggleNavbar}>
